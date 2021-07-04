@@ -807,6 +807,48 @@
                 
 
                 
+                
+<div id="myGallery" class="my-gallery">
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="far fa-image"></i>&nbsp;&nbsp;相册
+    </div>
+    <div class="row">
+        
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/2.jpg">
+                <img src="/medias/featureimages/2.jpg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/4.jpg">
+                <img src="/medias/featureimages/4.jpg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/18.jpg">
+                <img src="/medias/featureimages/18.jpg" class="responsive-img">
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<script>
+    $(function () {
+        let animateClass = 'animated pulse';
+        $('#myGallery .photo').hover(function () {
+            $(this).addClass(animateClass);
+        }, function () {
+            $(this).removeClass(animateClass);
+        });
+    });
+</script>
+
+                
 
             </div>
         </div>
@@ -1059,6 +1101,11 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+
+    <!--动态线条背景-->
+    <script type="text/javascript"
+    color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
 
     <!-- Baidu Analytics -->
 
