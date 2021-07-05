@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="闲聊, HTML,CSS,JavaScript,JQuery,Vue.js,photoshop,Unity,UE等">
+    <meta name="keywords" content="docker复习——简答题篇, HTML,CSS,JavaScript,JQuery,Vue.js,photoshop,Unity,UE等">
     <meta name="description" content="分享知识,分享经验,偶尔写点段子">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>闲聊 | 在月光下滑坡-个人博客</title>
+    <title>docker复习——简答题篇 | 在月光下滑坡-个人博客</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -360,16 +360,15 @@
 </header>
 
     
-    
 
-    
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/source/images/docker.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">闲聊</h1>
+                    <h1 class="description center-align post-title">docker复习——简答题篇</h1>
                 </div>
             </div>
         </div>
@@ -377,9 +376,105 @@
 </div>
 
 
-    
 
-    <main class="post-container content">
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
         <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
@@ -387,12 +482,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/docker/">
+                                <span class="chip bg-color">docker</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                运维
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -415,14 +523,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 
@@ -440,51 +548,161 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
-                
-                    <link rel="stylesheet" href="/css/bb.css">
-                    <style>
-                        @font-face {
-                            font-family: "iconfont";
-                            src: url('//at.alicdn.com/t/font_1755564_z4mhxbw13mq.eot?t=1586882866168');
-                            /* IE9 */
-                            src: url('//at.alicdn.com/t/font_1755564_z4mhxbw13mq.eot?t=1586882866168#iefix') format('embedded-opentype'),
-                                /* IE6-IE8 */
-                            url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALcAAsAAAAAB2gAAAKPAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCfgqCUII8ATYCJAMMCwgABCAFhG0HQBuEBsiuMRkynL4YFCHtLKs4b+k7/80U8DwHIB6+xtr7u3vniDZI6tmnkyDS8NC5iFgJlE7pTPcO8e5b+803aYQy8YtH1JPKyZzY3ttb1EonioVGSBAiRJp4JV9cFppCxLpe2z8sUs37O4QEDFRM0lFeAw4XN6bQPG06zTG8DRwHFOBeGEVWIjE+mP8wduVFPCbQNK4ktN8/OgFJhbEqEFemLkEyFVcUVqoL1ZKDRbyIqafb9AA8+9+PX41IklQyY+PBSZ8KnR+9iBx0OxZcp8PxvGDHyFgACnFY6j8QCfMLIppKPmoCrGtW8OG/y0eufLX/8AiJqDKa22AGWpMzUth6p6aARySQQRUUL4AnSBmuyvIwPdbz21OX5ybO5duOJifaLl6cvkrd1HR7kWEy6yikff29PvgO17V/Tf/9f/oN3PDqz22a719IYlZJHQetpLY08MV6fwFDrF0B6F4XyB3/FyEEnZnU2XGtVwHvpxtA1d6pftKB4AcoWo4U1QQbiiy35Xow27whbwK2NNFlhAc99zeOtM4S6ikFQ1IzhqxuglAoC6ho2UBV3Raa5g0cbxnCRURpYM4pQOh3h6TXG7J+j4RCeULFqFdU9UcETYfRdGHLVJjpHk6SIBXlTTQV5mmWS6SD1jHSVx2JJ1U+a4p4YKawvrSSLQ2QR3yMLcGa3hBCQ40zF/vBc+Q4DH3OLFJExRDCb64un5S9qaIwF9L2cEQiEBWSbUImBePR3PFCOvf5MUS3yiHhNR0VySmEC5jTo7qKWgvCgN5r1XEtrwTW6BoEQYM0HONC/cBLHDPPIL98noUohAqjR7uvWVV1HlVbfWV+o/t8J6DJOJ4jRY6idmVKnmVS1q8tK8zfBAAA') format('woff2'),
-                            url('//at.alicdn.com/t/font_1755564_z4mhxbw13mq.woff?t=1586882866168') format('woff'),
-                            url('//at.alicdn.com/t/font_1755564_z4mhxbw13mq.ttf?t=1586882866168') format('truetype'),
-                                /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-                            url('//at.alicdn.com/t/font_1755564_z4mhxbw13mq.svg?t=1586882866168#iconfont') format('svg');
-                            /* iOS 4.1- */
-                        }
+                <h1 id="docker复习"><a href="#docker复习" class="headerlink" title="docker复习"></a>docker复习</h1><p>注：（）内容为可替换内容/详细补充</p>
+<h2 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h2><h3 id="什么是docker？"><a href="#什么是docker？" class="headerlink" title="什么是docker？"></a>什么是docker？</h3><p>答：docker是一个容器平台，可以将开发的项目连同环境一起打包，上线部署。</p>
+<h3 id="Docker与虚拟机的不同点在哪里？"><a href="#Docker与虚拟机的不同点在哪里？" class="headerlink" title="Docker与虚拟机的不同点在哪里？"></a>Docker与虚拟机的不同点在哪里？</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210705184026311.png" alt="image-20210705184026311"></p>
+<p>答：</p>
+<p>介绍：</p>
+<p>​    docker是一个容器平台，将应用打包进docker后，启动的容器使用沙箱机制，相互隔离，互不影响。</p>
+<p>​    虚拟机是运行在操作系统中的一个虚拟系统。</p>
+<p><strong>区别：</strong></p>
+<p>​    1.启动时间：容器时秒级启动，虚拟机是分钟级启动。</p>
+<p>​    2.轻量级：容器一般是m级别的大小，虚拟机时g级别的大小。</p>
+<p>​    3.性能：容器内部的系统仅支持系统的正常运行，虚拟机则需要一套完整的系统。</p>
+<h3 id="Docker容器有几种状态，分别是什么？"><a href="#Docker容器有几种状态，分别是什么？" class="headerlink" title="Docker容器有几种状态，分别是什么？"></a>Docker容器有几种状态，分别是什么？</h3><p><strong>答：四种状态；运行，已暂停，重新启动，退出</strong></p>
+<p><em>拓展：docker容器的生命周期？</em></p>
+<p>​    <em>答：一个docker容器从产生到运行部署大致分为如下三个状态：Dockerfile、Image、Contaniner。</em></p>
+<p>​    <em>即一个镜像文件从产生、运行到停止的过程。</em></p>
+<h3 id="写出Dockerfile中最常见四条指令，并指明含义？"><a href="#写出Dockerfile中最常见四条指令，并指明含义？" class="headerlink" title="写出Dockerfile中最常见四条指令，并指明含义？"></a>写出Dockerfile中最常见四条指令，并指明含义？</h3><p> 答：</p>
+<p>​    From 指定基础镜像</p>
+<p>​    RUN 运行指定命令</p>
+<p>​    CMD 容器启动时运行的命令</p>
+<p>​    COPY 拷贝文件到镜像</p>
+<p>​    ADD 同copy，但多了解压缩的功能</p>
+<p>​    VOLUME 指定挂载点，容器和宿主机的目录</p>
+<p>​    EVN 设定容器内环境变量</p>
+<h3 id="Docker镜像特点是什么？如何自定义镜像？"><a href="#Docker镜像特点是什么？如何自定义镜像？" class="headerlink" title="Docker镜像特点是什么？如何自定义镜像？"></a>Docker镜像特点是什么？如何自定义镜像？</h3><p>答：（1）Docker镜像就<strong>是一个只读的模板</strong>，容器<strong>在启动的时</strong>候<strong>创建一层可写层</strong>作为<strong>最上层</strong></p>
+<p>（2）方法一：使用<strong>DockerFile直接创建自定义镜像</strong>，基本步骤分别为：编写Dockerfile文件、docker build 生成镜像、docker run 创建容器运行。</p>
+<p>方法二：使用IDEA创建自定义镜像</p>
+<p><em>拓展：启动后，可通过日志查询命令查看是否已启动完毕且成功。</em></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker logs -f 镜像名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-                        .iconfont {
-                            font-family: "iconfont" !important;
-                            font-size: 16px;
-                            font-style: normal;
-                            -webkit-font-smoothing: antialiased;
-                            -moz-osx-font-smoothing: grayscale;
-                        }
+<h3 id="Docker-数据卷有什么作用？创建数据卷的命令是？"><a href="#Docker-数据卷有什么作用？创建数据卷的命令是？" class="headerlink" title="Docker 数据卷有什么作用？创建数据卷的命令是？"></a>Docker 数据卷有什么作用？创建数据卷的命令是？</h3><p> <strong>答：容器的持久化、容器间继承与共享数据。</strong></p>
+<p><strong>命令：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it -v /宿主机绝对路径目录:/容器内目录      镜像名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-                        .icon-lianjie:before {
-                            content: "\e6a3";
-                        }
+<p>详细补充：</p>
+<p>​    Docker数据卷作用（特点）：</p>
+<pre><code>1. 数据卷可在容器之间共享或重用数据
+ 2. 卷中的更改可以直接生效
+ 3. 数据卷中的更改不会包含在镜像的更新中
+ 4. 数据卷的生命周期一直持续到没有容器使用它为止
+</code></pre>
+<p>创建数据卷的命令：</p>
+<p>使用 -v 命令，也可以在Dockerfile中使用VOLUME指令来给镜像添加一个或多个数据卷</p>
+<p>-v命令</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it -v /宿主机绝对路径目录:/容器内目录      镜像名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-                        .icon-lianjie-copy:before {
-                            content: "\e6a4";
-                        }
-                    </style>
-                    <main id="app">
-                        <p class="tip">共计发送 {{count}} 条说说</p>
-                        <div class="timenode" v-for="item in contents" v-cloak>
-                            <div class="meta">
-                                <p><time v-bind:datetime="item.attributes.time">{{item.attributes.time}}</time></p>
-                            </div>
-                            <div class="body">
-                                <p v-html='item.attributes.content'></p>
-                            </div>
-                        </div>
-                    </main>
+<p> 带权限的-v命令： </p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it -v /宿主机绝对路径目录:/容器内目录:ro 镜像名`<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>说明：</p>
+<p>出于可移植和分享的考虑，<u>用-v 主机目录:容器目录这种方法不能够直接在Dockerfile中实现。</u></p>
+<p>由于宿主机目录是依赖于特定宿主机的，并不能够保证在所有的宿主机上都存在这样的特定目录。</p>
+<p>使用file构建</p>
+<p>重点：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">VOLUME<span class="token punctuation">[</span><span class="token string">"/dataVolumeContainer"</span>,<span class="token string">"/dataVolumeContainer2"</span>,<span class="token string">"/dataVolumeContainer3"</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># volume test</span>
+
+FROM centos
+
+VOLUME <span class="token punctuation">[</span><span class="token string">"/dataVolumeContainer1"</span>,<span class="token string">"/dataVolumeContainer2"</span><span class="token punctuation">]</span>
+
+CMD <span class="token builtin class-name">echo</span> <span class="token string">"finished,--------success1"</span>
+
+CMD /bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Docker仓库有哪些，它们的区别是什么？"><a href="#Docker仓库有哪些，它们的区别是什么？" class="headerlink" title="Docker仓库有哪些，它们的区别是什么？"></a>Docker仓库有哪些，它们的区别是什么？</h3><p> 答：分公有仓库与私有仓库</p>
+<p>公有仓库：<strong>Docker Hub</strong>、时速云镜像仓库、网易云镜像服务、DaoCloud镜像市场、阿里云镜像库等</p>
+<p> 私有仓库：用户自己在本地搭建私有Docker Register（最常用的就是registry、Harbor两种）</p>
+<p>区别：公有仓库所有人都可以搜索和下载公共镜像，私有仓库只有私有用户才能查询和下载。</p>
+<h3 id="什么是Docker-Swarm，其功能是什么？"><a href="#什么是Docker-Swarm，其功能是什么？" class="headerlink" title="什么是Docker Swarm，其功能是什么？"></a>什么是Docker Swarm，其功能是什么？</h3><p> 答：<strong>它是Docker的本机群集</strong>（Swarm 是目前 Docker 官方唯一指定（绑定）的集群管理工具）；<strong>它将Docker主机池转变为单个虚拟Docker主机</strong>（它可以把多个 Docker 主机组成的系统转换为单一的虚拟 Docker 主机），Docker Swarm<strong>提供标准的Docker API</strong>，使得容器可以组成跨主机的子网网络。</p>
+<p><em>拓展：Docker三剑客</em></p>
+<p><em>Docker Machine、Docker Compose、Docker Swarm 并称 Docker 三剑客。</em></p>
+<h3 id="什么是Docker-Compose，使用的步骤是什么"><a href="#什么是Docker-Compose，使用的步骤是什么" class="headerlink" title="什么是Docker Compose，使用的步骤是什么?"></a>什么是Docker Compose，使用的步骤是什么?</h3><p> 答：（1）<strong>Docker Compose是一个用来定义和运行复杂应用的Docker工具。</strong></p>
+<p>使用Docker Compose不再需要使用shell脚本来启动容器，而使用服务编排的方式来管理容器。</p>
+<p><strong>Docker Compose核心是通过一个YAML文件来管理多个Docker容器</strong>，接着就可以从配置中创建并启动所有服务。</p>
+<p> （2）①定义要创建的应用，②创建容器的Dockerfile文件，③定义docker-compose脚本（创建docker-compose.yml文件，并在里面定义服务），④使用Compose构建并运行应用程序，⑤编辑compose文件以添加文件绑定挂载，⑥使用更新的compose文件重新构建和运行应用程序。</p>
+<p> 脚本文件示例：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">version: <span class="token string">'3'</span>
+services:
+  web:
+    build: <span class="token punctuation">..</span>/
+    ports:
+     - <span class="token string">"5000:5000"</span>
+    volumes:
+     - <span class="token punctuation">..</span>/src:/opt/src
+  redis:
+    image: <span class="token string">"redis:3.0.7"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上面这个compose文件就定义了两个服务，即定义了web和redis两个容器。 </p>
+<p>再通过volumes（卷）将主机上的项目目录（../src）挂载到容器中的/opt/src目录下，允许您即时修改代码，而无需重新构建映像。</p>
+<p>web容器： </p>
+<ul>
+<li>使用当前docker-compose.yml文件所在目录的上级目录（compose_test/Dockerfile）中的Dockerfile构建映像。 </li>
+<li>将容器上的暴露端口5000映射到主机上的端口5000。 我们使用Flask Web服务器的默认端口5000。<br>redis容器： </li>
+<li>redis服务使用从Docker Hub提取的官方redis镜像3.0.7版本。</li>
+</ul>
+<p>最后一步命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker-compose up -d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h3 id="Registry服务端、客户端如何配置？"><a href="#Registry服务端、客户端如何配置？" class="headerlink" title="Registry服务端、客户端如何配置？"></a>Registry服务端、客户端如何配置？</h3><p> <em>本题答案参考自<a target="_blank" rel="noopener" href="https://blog.51cto.com/u_14306186/2514802">https://blog.51cto.com/u_14306186/2514802</a></em></p>
+<p>答：准备两台docker服务器，dockerA创建registry私有仓库，dockerB做测试的客户端。</p>
+<p>tips：本题主要记配置文件的代码</p>
+<p>即docker A：<code>ExecStart=/usr/bin/dockerd    --insecure-registry 服务器IP地址:5000端口号</code></p>
+<p>docker B： <code>ExecStart=/usr/bin/dockerd --insecure-registry 客户端IP地址:5000端口号</code></p>
+<p>注：客户端一定要和服务器仓库ip一致 不然无法识别和上传 至于5000端口 应为registry默认5000端口</p>
+<p>详细步骤：</p>
+<p>docker A:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># docker pull registry:2              //下载registry:2的镜像</span>
+<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># docker run -itd --name registry --restart=always  -p 5000:5000 -v /registry:/var/lib/registry registry:2</span>
+//创建一个registry容器来运行registry服务；
+//-p：端口映射（前面是宿主机端口：后面是容器暴露的端口）；
+//-v：挂载目录（前面是宿主机的目录：后面的是容器的目录）自动创建宿主机的目录；
+//--restart<span class="token operator">=</span>always：随docker服务的启动而启动！<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p> <img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210705203256085.png" alt="image-20210705203256085"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># docker tag  centos:7 192.168.45.129:5000/centos:7  </span>
+//更改镜像名称
+注：私有仓库镜像的命名规则：192.168.45.129:5000/XXX（宿主机的IP:5000端口/镜像名称）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210705203355817.png" alt="image-20210705203355817"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># vim /usr/lib/systemd/system/docker.service   //修改docker主配置文件</span>
+<span class="token assign-left variable">ExecStart</span><span class="token operator">=</span>/usr/bin/dockerd    --insecure-registry <span class="token number">192.168</span>.45.129:5000  
+//修改原本的配置文件添加不安全的仓库（--insecure-registry），地址是宿主机的IP地址与5000端口
+<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># systemctl daemon-reload </span>
+<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># systemctl restart docker             //重新启动docker服务</span>
+<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># docker push  192.168.45.129:5000/centos:7</span>
+//将重命名后的镜像上传到registry私有仓库
+<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># curl 192.168.45.129:5000/v2/_catalog             //查看私有仓库中的镜像</span>
+<span class="token punctuation">{</span><span class="token string">"repositories"</span>:<span class="token punctuation">[</span><span class="token string">"centos"</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># curl 192.168.45.129:5000/v2/centos/tags/list         //查看镜像的详细信息</span>
+<span class="token punctuation">{</span><span class="token string">"name"</span><span class="token builtin class-name">:</span><span class="token string">"centos"</span>,<span class="token string">"tags"</span>:<span class="token punctuation">[</span><span class="token string">"7"</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>dockerB：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># vim /usr/lib/systemd/system/docker.service </span>
+//修改docker的主配置文件
+ <span class="token assign-left variable">ExecStart</span><span class="token operator">=</span>/usr/bin/dockerd --insecure-registry <span class="token number">192.168</span>.45.129:5000
+//添加内容与registry一致，指定registry私有仓库服务器的IP地址及端口
+<span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># systemctl daemon-reload </span>
+<span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># systemctl restart docker            //重新启动docker服务</span>
+<span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># curl 192.168.45.129:5000/v2/_catalog         //查看私有仓库中的镜像</span>
+<span class="token punctuation">{</span><span class="token string">"repositories"</span>:<span class="token punctuation">[</span><span class="token string">"centos"</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+<span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># curl 192.168.45.129:5000/v2/centos/tags/list     //查看私有仓库中的镜像</span>
+<span class="token punctuation">{</span><span class="token string">"name"</span><span class="token builtin class-name">:</span><span class="token string">"centos"</span>,<span class="token string">"tags"</span>:<span class="token punctuation">[</span><span class="token string">"7"</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+<span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># docker pull 192.168.45.129:5000/centos:7</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210705203542638.png" alt="image-20210705203542638"></p>
+<h3 id="集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？"><a href="#集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？" class="headerlink" title="集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？"></a>集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？</h3><p>答：（1）略</p>
+<p>（2）</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@node1 ~<span class="token punctuation">]</span><span class="token comment"># ntpstat</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -510,7 +728,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://a1561532803.github.io/yueguang.github.io/bb/index.html">https://a1561532803.github.io/yueguang.github.io/bb/index.html</a>
+                    <a href="https://a1561532803.github.io/yueguang.github.io/posts/57113.html">https://a1561532803.github.io/yueguang.github.io/posts/57113.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -547,7 +765,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/docker/">
+                                    <span class="chip bg-color">docker</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -983,13 +1205,12 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/bb/index.html">
+                <a href="/posts/57113.html">
                     <div class="card-image">
                         
+                        <img src="/source/images/docker.jpg" class="responsive-img" alt="docker复习——简答题篇">
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="闲聊">
-                        
-                        <span class="card-title">闲聊</span>
+                        <span class="card-title">docker复习——简答题篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1004,13 +1225,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            在月光下滑坡
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1018,16 +1251,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/bb/index.html">
+                <a href="/posts/21396.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="闲聊">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="欢迎来到我的个人博客">
                         
-                        <span class="card-title">闲聊</span>
+                        <span class="card-title">欢迎来到我的个人博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1038,17 +1271,28 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-04
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            在月光下滑坡
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web%E5%BC%80%E5%8F%91/" class="post-category">
+                                    web开发
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%88%86%E4%BA%AB/">
+                        <span class="chip bg-color">分享</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1115,115 +1359,104 @@
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
-    </main>
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
 
-    <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js"></script>
-    <script type="text/javascript">
-        var {
-            Query
-        } = AV;
-        AV.init({
-            appId: "ksMjTVuG3YMizV5kgWMUpOTw-MdYXbMMI",
-            appKey: "9oQoW6aYQo56OM8EriRFyHeL",
-            serverURLs: 'ksmjtvug.api.lncldglobal.com'
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
         });
 
-        var query = new AV.Query('content');
-        var app = new Vue({
-            el: '#app',
-            data: {
-                page: 0,
-                count: 0,
-                contents: []
-            },
-            methods: {
-                loadMore: function (event) {
-                    getData(++this.page);
-                }
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
             }
-        })
+        });
 
-        function urlToLink(str) {
-            //增加发图片功能
-            var re = /\bhttps?:\/\/(?!\S+(?:jpe?g|png|bmp|gif|webp|gif))\S+/g;
-            var re_forpic = /\bhttps?:\/\/.*?(\.gif|\.jpeg|\.png|\.jpg|\.bmp|\.webp)/g;
-            str = str.replace(re, function (website) {
-                return "<a href='" + website + "' target='_blank'> <i class='iconfont icon-lianjie-copy'></i>链接 </a>";
-            });
-            str = str.replace(re_forpic, function (imgurl) {
-                return "<img src='" + imgurl + "' /> ";
-            });
-            return str;
-        }
-
-        //友好地显示时间
-        function timeago(dateTimeStamp) {
-            var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示。
-            var hour = minute * 60;
-            var day = hour * 24;
-            var week = day * 7;
-            var month = day * 30;
-            var now = new Date().getTime(); //获取当前时间毫秒
-            var diffValue = now - dateTimeStamp; //时间差
-            if (diffValue < 0) {
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
                 return;
             }
-            var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-            var hourC = diffValue / hour;
-            var dayC = diffValue / day;
-            var weekC = diffValue / week;
-            var monthC = diffValue / month;
-            if (monthC >= 1 && monthC <= 3) {
-                result = " " + parseInt(monthC) + " 月前"
-            } else if (weekC >= 1 && weekC <= 3) {
-                result = " " + parseInt(weekC) + " 周前"
-            } else if (dayC >= 1 && dayC <= 6) {
-                result = " " + parseInt(dayC) + " 天前"
-            } else if (hourC >= 1 && hourC <= 23) {
-                result = " " + parseInt(hourC) + " 小时前"
-            } else if (minC >= 1 && minC <= 59) {
-                result = " " + parseInt(minC) + " 分钟前"
-            } else if (diffValue >= 0 && diffValue <= minute) {
-                result = "刚刚"
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
             } else {
-                var datetime = new Date();
-                datetime.setTime(dateTimeStamp);
-                var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                result = Nmonth + "-" + Ndate
+                w = w + 14;
             }
-            return result;
-        }
+            $('#' + targetId).width(w);
+        };
 
-        function getData(page = 0) {
-            query.descending('createdAt').skip(page * 10).limit(10).find().then(function (results) {
-                if (results.length == 0) {
-                    alert('之前没发表过说说')
-                } else {
-                    let resC = results;
-                    reqData = false;
-                    resC.forEach((i) => {
-                        let dateTmp = new Date(i.createdAt);
-                        i.attributes.time = timeago(dateTmp);
-                        i.attributes.content = urlToLink(i.attributes.content);
-                        app.contents.push(i);
-                    })
-                }
-
-            }, function (error) {
-            });
-        }
-
-        getData(0);
-
-        query.count().then(function (count) {
-            app.count = count;
-        }, function (error) {
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
         });
-    </script>
+        
+    });
+</script>
 
     
+
+</main>
+
 
 
 
