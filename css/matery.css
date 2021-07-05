@@ -34,7 +34,7 @@
 }
 
 body {
-    background-color: #282829be;
+    background-color: #aab1f3be;
     margin: 0;
     color: #34495e;
     overflow-x: hidden;
@@ -570,9 +570,8 @@ header .go-back i {
 
 .bg-cover .container {
     position: relative;
-    color: #fff;
+    color: rgb(84, 109, 177);
     z-index: 2;
-    -webkit-text-stroke: 1px rgb(152, 153, 151);
 }
 
 .bg-cover .title {
@@ -580,13 +579,17 @@ header .go-back i {
     line-height: 1.2em;
     margin-bottom: 20px;
     position: relative;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    text-shadow:rgb(57, 51, 61)3px 4px 5px;
 }
 
 .bg-cover .description {
     font-weight: 300;
-    font-size: 1.25rem;
+    font-size: 1.28rem;
     line-height: 1.4em;
-    color: #eee;
+    color: rgba(255, 255, 255, 0.877);
+    text-shadow:rgb(57, 51, 61)3px 4px 5px;
+    
 }
 
 .bg-cover .post-title {
