@@ -34,7 +34,7 @@
 }
 
 body {
-    background-color: #eaeaea;
+    background-color: #282829be;
     margin: 0;
     color: #34495e;
     overflow-x: hidden;
@@ -572,6 +572,7 @@ header .go-back i {
     position: relative;
     color: #fff;
     z-index: 2;
+    -webkit-text-stroke: 1px rgb(152, 153, 151);
 }
 
 .bg-cover .title {
