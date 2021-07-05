@@ -516,14 +516,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-05
+                    2021-07-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.2k
                 </div>
                 
 
@@ -548,8 +548,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="docker复习"><a href="#docker复习" class="headerlink" title="docker复习"></a>docker复习</h1><p>注：（）内容为可替换内容/详细补充</p>
-<h2 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h2><h3 id="什么是docker？"><a href="#什么是docker？" class="headerlink" title="什么是docker？"></a>什么是docker？</h3><p>答：docker是一个容器平台，可以将开发的项目连同环境一起打包，上线部署。</p>
+                <h1 id="docker复习——简答篇"><a href="#docker复习——简答篇" class="headerlink" title="docker复习——简答篇"></a>docker复习——简答篇</h1><p>注：（）内容为可替换内容/详细补充</p>
+<h2 id="基础简答题"><a href="#基础简答题" class="headerlink" title="基础简答题"></a>基础简答题</h2><h3 id="什么是docker？"><a href="#什么是docker？" class="headerlink" title="什么是docker？"></a>什么是docker？</h3><p>答：docker是一个容器平台，可以将开发的项目连同环境一起打包，上线部署。</p>
 <h3 id="Docker与虚拟机的不同点在哪里？"><a href="#Docker与虚拟机的不同点在哪里？" class="headerlink" title="Docker与虚拟机的不同点在哪里？"></a>Docker与虚拟机的不同点在哪里？</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210705184026311.png" alt="image-20210705184026311"></p>
 <p>答：</p>
 <p>介绍：</p>
@@ -584,9 +584,9 @@
 <p>详细补充：</p>
 <p>​    Docker数据卷作用（特点）：</p>
 <pre><code>1. 数据卷可在容器之间共享或重用数据
- 2. 卷中的更改可以直接生效
- 3. 数据卷中的更改不会包含在镜像的更新中
- 4. 数据卷的生命周期一直持续到没有容器使用它为止
+2. 卷中的更改可以直接生效
+3. 数据卷中的更改不会包含在镜像的更新中
+4. 数据卷的生命周期一直持续到没有容器使用它为止
 </code></pre>
 <p>创建数据卷的命令：</p>
 <p>使用 -v 命令，也可以在Dockerfile中使用VOLUME指令来给镜像添加一个或多个数据卷</p>
@@ -619,9 +619,10 @@ CMD /bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span><sp
 <p>公有仓库：<strong>Docker Hub</strong>、时速云镜像仓库、网易云镜像服务、DaoCloud镜像市场、阿里云镜像库等</p>
 <p> 私有仓库：用户自己在本地搭建私有Docker Register（最常用的就是registry、Harbor两种）</p>
 <p>区别：公有仓库所有人都可以搜索和下载公共镜像，私有仓库只有私有用户才能查询和下载。</p>
-<h3 id="什么是Docker-Swarm，其功能是什么？"><a href="#什么是Docker-Swarm，其功能是什么？" class="headerlink" title="什么是Docker Swarm，其功能是什么？"></a>什么是Docker Swarm，其功能是什么？</h3><p> 答：<strong>它是Docker的本机群集</strong>（Swarm 是目前 Docker 官方唯一指定（绑定）的集群管理工具）；<strong>它将Docker主机池转变为单个虚拟Docker主机</strong>（它可以把多个 Docker 主机组成的系统转换为单一的虚拟 Docker 主机），Docker Swarm<strong>提供标准的Docker API</strong>，使得容器可以组成跨主机的子网网络。</p>
+<h3 id="什么是Docker-Swarm，其功能是什么？"><a href="#什么是Docker-Swarm，其功能是什么？" class="headerlink" title="什么是Docker Swarm，其功能是什么？"></a>什么是Docker Swarm，其功能是什么？</h3><p> 答：<strong>它是Docker的本机群集</strong>（Swarm 是docker公司原生的集群管理（编排）工具。）；<strong>它将Docker主机池转变为单个虚拟Docker主机</strong>（它可以把多个 Docker 主机组成的系统转换为单一的虚拟 Docker 主机）（把一组docker主机抽象为一个整体来管理。），Docker Swarm<strong>提供标准的Docker API</strong>，使得容器可以组成跨主机的子网网络。</p>
 <p><em>拓展：Docker三剑客</em></p>
 <p><em>Docker Machine、Docker Compose、Docker Swarm 并称 Docker 三剑客。</em></p>
+<p><em>拓展：Do</em>cker swarm组成<br>    <em>Docker swarm节点类型两种：</em><br>      <em>1、manager 负责整个集群的管理，manager本身worker节点，但生产环境不推荐。manager节点一般奇数个，1、3、5</em><br>      2、worker 负责运行相应服务，即负责容器的创建。*</p>
 <h3 id="什么是Docker-Compose，使用的步骤是什么"><a href="#什么是Docker-Compose，使用的步骤是什么" class="headerlink" title="什么是Docker Compose，使用的步骤是什么?"></a>什么是Docker Compose，使用的步骤是什么?</h3><p> 答：（1）<strong>Docker Compose是一个用来定义和运行复杂应用的Docker工具。</strong></p>
 <p>使用Docker Compose不再需要使用shell脚本来启动容器，而使用服务编排的方式来管理容器。</p>
 <p><strong>Docker Compose核心是通过一个YAML文件来管理多个Docker容器</strong>，接着就可以从配置中创建并启动所有服务。</p>
