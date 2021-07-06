@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="在月光下滑坡-个人博客" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="在月光下滑坡-个人博客" type="application/atom+xml">
 </head>
 
 
@@ -523,14 +523,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    10 分
                 </div>
                 
 
@@ -699,7 +699,15 @@ services:
 <span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># docker pull 192.168.45.129:5000/centos:7</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210705203542638.png" alt="image-20210705203542638"></p>
-<h3 id="集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？"><a href="#集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？" class="headerlink" title="集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？"></a>集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？</h3><p>答：（1）该题回答的不完善</p>
+<h3 id="集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？"><a href="#集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？" class="headerlink" title="集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？"></a>集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？</h3><p>答：有chrony服务和ntp服务；chrony服务：在客户端节点执行<code>chronyc sources -v</code>，结果中包含*，则代表同步成功。如果结果中有？，则代表同步不成功，需要等待。ntp服务：执行<code>ntpstat</code>命令</p>
+<p>NTP配置详细：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vi</span> /etc/ntp.conf
+           ntpdate server IP   
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><em>重启ntpd服务。</em></p>
+<p><em>跳跃同步，使用ntpdate不能开启ntpd服务</em></p>
+<p>拓展：</p>
 <p>搭建NTP时间服务器(服务端配置)</p>
 <p><em>解释：自己搭建一台NTP服务器，然后其它机器同步这台NTP时间服务器上的时间，而NTP时间服务器同步公网上远程机器的时间，从而实现整套集群保持与北京时间同步。</em></p>
 <p>安装ntp（NTP服务端的包名）</p>
@@ -721,7 +729,7 @@ services:
 Fri Oct <span class="token number">19</span> <span class="token number">10</span>:35:35 CST <span class="token number">2018</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>ntpd服务只要启动，自动会在后台为这台NTP服务器同步时间(可能需要等几分钟)，不需要我们手动操作，其它机器只需同步这台NTP服务器即可。</p>
-<p>（2）命令：<code>ntpstat</code></p>
+<p>命令：<code>ntpstat</code>，查看是否成功</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># ntpstat</span>
 
 unsynchronised
@@ -730,6 +738,19 @@ unsynchronised
 
    polling server every <span class="token number">8</span> s <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>chrony配置详细：<br>     1、 server端：<br>      （1）安装包</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> chrony<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​      （2）修改配置文件 <code>vi /etc/chrony.conf</code><br>​            ①将原有server开头的注释掉<br>​            ②在文件最后追加以下内容<br>​                    </p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">local</span> stratum <span class="token number">10</span> //不同步外部时钟源
+                    server master iburst//自己做时钟源
+                    allow all //允许所有客户端同步我这个时钟源，使用我做时钟源服务器
+     <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>（3）重启服务</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">systemctl restart chronyd  <span class="token operator">&amp;&amp;</span> systemctl <span class="token builtin class-name">enable</span> chronyd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​     2、client端<br>​         （1）安装包<code>yum install chrony</code><br>​         （2）修改配置文件 ``vi /etc/chrony.conf<code>​               ①将原有server开头的注释掉 ​               ②在文件最后追加以下内容 ​                 </code>server 10.1.0.10 iburst  //配置10.1.0.10<code>为时钟源 ​           （3）重启服务 ​                 </code>systemctl restart chronyd  &amp;&amp; systemctl enable chronyd`</p>
 
                 
             </div>
