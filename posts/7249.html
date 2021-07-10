@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="docker复习——简答题篇, HTML,CSS,JavaScript,JQuery,Vue.js,photoshop,Unity,UE等">
+    <meta name="keywords" content="typora辅助工具——快捷标注颜色, HTML,CSS,JavaScript,JQuery,Vue.js,photoshop,Unity,UE等">
     <meta name="description" content="分享知识,分享经验,偶尔写点段子">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>docker复习——简答题篇 | 在月光下滑坡</title>
+    <title>typora辅助工具——快捷标注颜色 | 在月光下滑坡</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -363,12 +363,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/zygxhp/picture/raw/master/img/docker.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">docker复习——简答题篇</h1>
+                    <h1 class="description center-align post-title">typora辅助工具——快捷标注颜色</h1>
                 </div>
             </div>
         </div>
@@ -484,8 +484,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/docker/">
-                                <span class="chip bg-color">docker</span>
+                            <a href="/tags/typora/">
+                                <span class="chip bg-color">typora</span>
+                            </a>
+                        
+                            <a href="/tags/AutoHotkey/">
+                                <span class="chip bg-color">AutoHotkey</span>
                             </a>
                         
                     </div>
@@ -496,8 +500,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
-                                运维
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
                             </a>
                         
                     </div>
@@ -509,7 +513,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-05
+                    2021-07-10
                 </div>
                 
 
@@ -523,14 +527,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    4 分
                 </div>
                 
 
@@ -548,209 +552,140 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="docker复习——简答篇"><a href="#docker复习——简答篇" class="headerlink" title="docker复习——简答篇"></a>docker复习——简答篇</h1><p>注：（）内容为可替换内容/详细补充</p>
-<h2 id="基础简答题"><a href="#基础简答题" class="headerlink" title="基础简答题"></a>基础简答题</h2><h3 id="什么是docker？"><a href="#什么是docker？" class="headerlink" title="什么是docker？"></a>什么是docker？</h3><p>答：docker是一个容器平台，可以将开发的项目连同环境一起打包，上线部署。</p>
-<h3 id="Docker与虚拟机的不同点在哪里？"><a href="#Docker与虚拟机的不同点在哪里？" class="headerlink" title="Docker与虚拟机的不同点在哪里？"></a>Docker与虚拟机的不同点在哪里？</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210705184026311.png" alt="image-20210705184026311"></p>
-<p>答：</p>
-<p>介绍：</p>
-<p>​    docker是一个容器平台，将应用打包进docker后，启动的容器使用沙箱机制，相互隔离，互不影响。</p>
-<p>​    虚拟机是运行在操作系统中的一个虚拟系统。</p>
-<p><strong>区别：</strong></p>
-<p>​    1.启动时间：容器时秒级启动，虚拟机是分钟级启动。</p>
-<p>​    2.轻量级：容器一般是m级别的大小，虚拟机时g级别的大小。</p>
-<p>​    3.性能：容器内部的系统仅支持系统的正常运行，虚拟机则需要一套完整的系统。</p>
-<h3 id="Docker容器有几种状态，分别是什么？"><a href="#Docker容器有几种状态，分别是什么？" class="headerlink" title="Docker容器有几种状态，分别是什么？"></a>Docker容器有几种状态，分别是什么？</h3><p><strong>答：四种状态；运行，已暂停，重新启动，退出</strong></p>
-<p><em>拓展：docker容器的生命周期？</em></p>
-<p>​    <em>答：一个docker容器从产生到运行部署大致分为如下三个状态：Dockerfile、Image、Contaniner。</em></p>
-<p>​    <em>即一个镜像文件从产生、运行到停止的过程。</em></p>
-<h3 id="写出Dockerfile中最常见四条指令，并指明含义？"><a href="#写出Dockerfile中最常见四条指令，并指明含义？" class="headerlink" title="写出Dockerfile中最常见四条指令，并指明含义？"></a>写出Dockerfile中最常见四条指令，并指明含义？</h3><p> 答：</p>
-<p>​    From 指定基础镜像</p>
-<p>​    RUN 运行指定命令</p>
-<p>​    CMD 容器启动时运行的命令</p>
-<p>​    COPY 拷贝文件到镜像</p>
-<p>​    ADD 同copy，但多了解压缩的功能</p>
-<p>​    VOLUME 指定挂载点，容器和宿主机的目录</p>
-<p>​    EVN 设定容器内环境变量</p>
-<h3 id="Docker镜像特点是什么？如何自定义镜像？"><a href="#Docker镜像特点是什么？如何自定义镜像？" class="headerlink" title="Docker镜像特点是什么？如何自定义镜像？"></a>Docker镜像特点是什么？如何自定义镜像？</h3><p>答：（1）Docker镜像就<strong>是一个只读的模板</strong>，容器<strong>在启动的时</strong>候<strong>创建一层可写层</strong>作为<strong>最上层</strong></p>
-<p>（2）方法一：使用<strong>DockerFile直接创建自定义镜像</strong>，基本步骤分别为：编写Dockerfile文件、docker build 生成镜像、docker run 创建容器运行。</p>
-<p>方法二：使用IDEA创建自定义镜像</p>
-<p><em>拓展：启动后，可通过日志查询命令查看是否已启动完毕且成功。</em></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker logs -f 镜像名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="typora辅助工具——快捷标注颜色，添加标签"><a href="#typora辅助工具——快捷标注颜色，添加标签" class="headerlink" title="typora辅助工具——快捷标注颜色，添加标签"></a>typora辅助工具——快捷标注颜色，添加标签</h1><blockquote>
+<p>本文参考自leqaq</p>
+<p>原文地址：<a target="_blank" rel="noopener" href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1447470&amp;ctid=2336">https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1447470&amp;ctid=2336</a></p>
+</blockquote>
+<h2 id="安装AutoHotkey"><a href="#安装AutoHotkey" class="headerlink" title="安装AutoHotkey"></a>安装AutoHotkey</h2><p>Typora 是一款支持实时预览的 Markdown 文本编辑器，功能强大，页面美观，但在Typora中，想要加颜色或者加大某个字体很不方便，只能使用 HTML 标签去包裹内容再去写入css属性，这样就显得很麻烦。</p>
+<p>比如我给一个字体增加颜色，得这样加上font标签才会生效</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210710174425002.png" alt="image-20210710174425002"></p>
+<p><font color="red" font-size="30px">这是一个测试</font></p>
+<p>↑这是刚才代码的效果</p>
+<p>使用 font 标签要写没这么长一串，也太麻烦了，所以找了个简便办法，就是——<strong>AutoHotkey</strong></p>
+<p>AutoHotkey是一款界面简洁的功能强大的热键脚本语言，可以将所有的键盘操作和鼠标操作自动化。</p>
+<p>首先得去官网安装一下，安装包很小。</p>
+<p>官网：<a target="_blank" rel="noopener" href="https://www.autohotkey.com/">https://www.autohotkey.com/</a></p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210710174624451.png" alt="image-20210710174624451"></p>
+<p>下载好后进行安装，安装成功后就可以开始编写脚本了！</p>
+<h2 id="编写ahk脚本"><a href="#编写ahk脚本" class="headerlink" title="编写ahk脚本"></a>编写ahk脚本</h2><p>新建一个 txt 文本文件，添加以下内容，之后将后缀修改为.ahk</p>
+<pre class="line-numbers language-none"><code class="language-none">;热键标记
+; !感叹号代表Alt键
+; # 井号代表 Windows 键
+; ^ 上三角号代表 Ctrl键
+; + 加号代表 Shift 键
+; 执行
+; ::代表按下前面快捷键后会执行后面的命令。
 
-<h3 id="Docker-数据卷有什么作用？创建数据卷的命令是？"><a href="#Docker-数据卷有什么作用？创建数据卷的命令是？" class="headerlink" title="Docker 数据卷有什么作用？创建数据卷的命令是？"></a>Docker 数据卷有什么作用？创建数据卷的命令是？</h3><p> <strong>答：容器的持久化、容器间继承与共享数据。</strong></p>
-<p><strong>命令：</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it -v /宿主机绝对路径目录:/容器内目录      镜像名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+; Typora
+; 快捷增加字体颜色
+; SendInput {Text} 解决中文输入法问题
 
-<p>详细补充：</p>
-<p>​    Docker数据卷作用（特点）：</p>
-<pre><code>1. 数据卷可在容器之间共享或重用数据
-2. 卷中的更改可以直接生效
-3. 数据卷中的更改不会包含在镜像的更新中
-4. 数据卷的生命周期一直持续到没有容器使用它为止
-</code></pre>
-<p>创建数据卷的命令：</p>
-<p>使用 -v 命令，也可以在Dockerfile中使用VOLUME指令来给镜像添加一个或多个数据卷</p>
-<p>-v命令</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it -v /宿主机绝对路径目录:/容器内目录      镜像名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+#IfWinActive ahk_exe Typora.exe
+{
+    ; alt+0 红色
+    !0::addFontColor("black")
 
-<p> 带权限的-v命令： </p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -it -v /宿主机绝对路径目录:/容器内目录:ro 镜像名`<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    ; alt+1 红色
+    !1::addFontColor("red")
 
-<p>说明：</p>
-<p>出于可移植和分享的考虑，<u>用-v 主机目录:容器目录这种方法不能够直接在Dockerfile中实现。</u></p>
-<p>由于宿主机目录是依赖于特定宿主机的，并不能够保证在所有的宿主机上都存在这样的特定目录。</p>
-<p>使用file构建</p>
-<p>重点：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">VOLUME<span class="token punctuation">[</span><span class="token string">"/dataVolumeContainer"</span>,<span class="token string">"/dataVolumeContainer2"</span>,<span class="token string">"/dataVolumeContainer3"</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    ; alt+1 橙色
+    !2::addFontColor("orange") 
 
+     ; alt+3 浅蓝色
+    !3::addFontColor("cornflowerblue")
 
+     ; alt+4 绿色
+    !4::addFontColor("green")
 
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># volume test</span>
+     ; alt+5 青色
+    !5::addFontColor("cyan") 
 
-FROM centos
+    ; alt+6 紫色
+    !6::addFontColor("purple") 
 
-VOLUME <span class="token punctuation">[</span><span class="token string">"/dataVolumeContainer1"</span>,<span class="token string">"/dataVolumeContainer2"</span><span class="token punctuation">]</span>
+    ; alt+7 黄色
+    !7::addFontColor("yellow")
 
-CMD <span class="token builtin class-name">echo</span> <span class="token string">"finished,--------success1"</span>
+    ; 增加 字体框
+    !f::addFont()
 
-CMD /bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    ;增加 div 标签
+    !d::addDiv()
 
-<h3 id="Docker仓库有哪些，它们的区别是什么？"><a href="#Docker仓库有哪些，它们的区别是什么？" class="headerlink" title="Docker仓库有哪些，它们的区别是什么？"></a>Docker仓库有哪些，它们的区别是什么？</h3><p> 答：分公有仓库与私有仓库</p>
-<p>公有仓库：<strong>Docker Hub</strong>、时速云镜像仓库、网易云镜像服务、DaoCloud镜像市场、阿里云镜像库等</p>
-<p> 私有仓库：用户自己在本地搭建私有Docker Register（最常用的就是registry、Harbor两种）</p>
-<p>区别：公有仓库所有人都可以搜索和下载公共镜像，私有仓库只有私有用户才能查询和下载。</p>
-<h3 id="什么是Docker-Swarm，其功能是什么？"><a href="#什么是Docker-Swarm，其功能是什么？" class="headerlink" title="什么是Docker Swarm，其功能是什么？"></a>什么是Docker Swarm，其功能是什么？</h3><p> 答：<strong>它是Docker的本机群集</strong>（Swarm 是docker公司原生的集群管理（编排）工具。）；<strong>它将Docker主机池转变为单个虚拟Docker主机</strong>（它可以把多个 Docker 主机组成的系统转换为单一的虚拟 Docker 主机）（把一组docker主机抽象为一个整体来管理。），Docker Swarm<strong>提供标准的Docker API</strong>，使得容器可以组成跨主机的子网网络。</p>
-<p><em>拓展：Docker三剑客</em></p>
-<p><em>Docker Machine、Docker Compose、Docker Swarm 并称 Docker 三剑客。</em></p>
-<p><em>拓展：Do</em>cker swarm组成<br>    <em>Docker swarm节点类型两种：</em><br>      <em>1、manager 负责整个集群的管理，manager本身worker节点，但生产环境不推荐。manager节点一般奇数个，1、3、5</em><br>      2、worker 负责运行相应服务，即负责容器的创建。*</p>
-<h3 id="什么是Docker-Compose，使用的步骤是什么"><a href="#什么是Docker-Compose，使用的步骤是什么" class="headerlink" title="什么是Docker Compose，使用的步骤是什么?"></a>什么是Docker Compose，使用的步骤是什么?</h3><p> 答：（1）<strong>Docker Compose是一个用来定义和运行复杂应用的Docker工具。</strong></p>
-<p>使用Docker Compose不再需要使用shell脚本来启动容器，而使用服务编排的方式来管理容器。</p>
-<p><strong>Docker Compose核心是通过一个YAML文件来管理多个Docker容器</strong>，接着就可以从配置中创建并启动所有服务。</p>
-<p> （2）①定义要创建的应用，②创建容器的Dockerfile文件，③定义docker-compose脚本（创建docker-compose.yml文件，并在里面定义服务），④使用Compose构建并运行应用程序，⑤编辑compose文件以添加文件绑定挂载，⑥使用更新的compose文件重新构建和运行应用程序。</p>
-<p> 脚本文件示例：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">version: <span class="token string">'3'</span>
-services:
-  web:
-    build: <span class="token punctuation">..</span>/
-    ports:
-     - <span class="token string">"5000:5000"</span>
-    volumes:
-     - <span class="token punctuation">..</span>/src:/opt/src
-  redis:
-    image: <span class="token string">"redis:3.0.7"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    ;增加 ` 号
+    !`::addPunctuation()
 
-<p>上面这个compose文件就定义了两个服务，即定义了web和redis两个容器。 </p>
-<p>再通过volumes（卷）将主机上的项目目录（../src）挂载到容器中的/opt/src目录下，允许您即时修改代码，而无需重新构建映像。</p>
-<p>web容器： </p>
+}
+
+; 快捷增加字体颜色
+addFontColor(color){
+    clipboard := "" ; 清空剪切板
+    Send {ctrl down}c{ctrl up} ; 复制
+    SendInput {TEXT}&lt;font color='%color%'&gt;
+    SendInput {ctrl down}v{ctrl up} ; 粘贴
+    If(clipboard = ""){
+        ; Typora 在这不会自动补充
+        SendInput {TEXT}&lt;/font&gt; 
+        ; 清空剪切板
+        clipboard := "" 
+    }else{
+        ; Typora中自动补全标签
+        SendInput {TEXT}&lt;/ 
+    }
+
+}
+; 添加 font 标签
+addFont(){
+    clipboard := "" ; 清空剪切板
+    Send {ctrl down}c{ctrl up} ; 复制
+    SendInput {TEXT}&lt;font style="color:;font-size:"&gt;
+    SendInput {ctrl down}v{ctrl up} ; 粘贴
+    If(clipboard = ""){
+        SendInput {TEXT}&lt;/font&gt; ; Typora 在这不会自动补充
+          clipboard := "" ; 清空剪切板
+    }else{
+        SendInput {TEXT}&lt;/ ; Typora中自动补全标签
+    } 
+}
+
+    ; 添加 Div 标签
+addDiv(){
+    clipboard := "" ; 清空剪切板
+    Send {ctrl down}c{ctrl up} ; 复制
+    SendInput {TEXT}&lt;div style=""&gt;
+    SendInput {ctrl down}v{ctrl up} ; 粘贴
+    If(clipboard = ""){
+        SendInput {TEXT}&lt;/div&gt; ; Typora 在这不会自动补充
+          clipboard := "" ; 清空剪切板
+    }else{
+        SendInput {TEXT}&lt;/ ; Typora中自动补全标签
+    }
+}
+
+addPunctuation(){
+    clipboard := "" ; 清空剪切板
+    Send {ctrl down}c{ctrl up} ; 复制
+    SendInput {TEXT}``
+    SendInput {ctrl down}v{ctrl up} ; 粘贴
+    SendInput {TEXT}``
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>将上述内容复制进去，可以自己进行修改，注释也很清除，有编程基础的可以自己进行修改。</p>
+<p>保存之后可以直接选择.ahk文件，右键点击 <code>run script</code>，也可以使用 AutoHotkey 的 convert .ahk to .exe 将文件转为 exe 程序方便使用。</p>
+<p>之后当typora运行时，右键选中需要标注颜色的内容</p>
 <ul>
-<li>使用当前docker-compose.yml文件所在目录的上级目录（compose_test/Dockerfile）中的Dockerfile构建映像。 </li>
-<li>将容器上的暴露端口5000映射到主机上的端口5000。 我们使用Flask Web服务器的默认端口5000。<br>redis容器： </li>
-<li>redis服务使用从Docker Hub提取的官方redis镜像3.0.7版本。</li>
+<li>按下 alt+数字键 0 - 7 可以添加颜色，具体颜色看注释</li>
+<li><code>alt + d</code> 添加 div 标签，方便做内容居中 <div style=""></div></li>
+<li><code>alt + f </code>添加 font 标签，方便自定义颜色和字体大小 <font style="color:;font-size:"></font></li>
+<li><code>alt + </code> `给内容加上标记，也是加上一种颜色（对应格式→代码）</li>
 </ul>
-<p>最后一步命令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker-compose up -d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<h3 id="Registry服务端、客户端如何配置？"><a href="#Registry服务端、客户端如何配置？" class="headerlink" title="Registry服务端、客户端如何配置？"></a>Registry服务端、客户端如何配置？</h3><p> <em>本题答案参考自<a target="_blank" rel="noopener" href="https://blog.51cto.com/u_14306186/2514802">https://blog.51cto.com/u_14306186/2514802</a></em></p>
-<p>答：准备两台docker服务器，dockerA创建registry私有仓库，dockerB做测试的客户端。</p>
-<p>tips：本题主要记配置文件的代码</p>
-<p>即docker A：<code>ExecStart=/usr/bin/dockerd    --insecure-registry 服务器IP地址:5000端口号</code></p>
-<p>docker B： <code>ExecStart=/usr/bin/dockerd --insecure-registry 客户端IP地址:5000端口号</code></p>
-<p>注：客户端一定要和服务器仓库ip一致 不然无法识别和上传 至于5000端口 应为registry默认5000端口</p>
-<p>详细步骤：</p>
-<p>docker A:</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># docker pull registry:2              //下载registry:2的镜像</span>
-<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># docker run -itd --name registry --restart=always  -p 5000:5000 -v /registry:/var/lib/registry registry:2</span>
-//创建一个registry容器来运行registry服务；
-//-p：端口映射（前面是宿主机端口：后面是容器暴露的端口）；
-//-v：挂载目录（前面是宿主机的目录：后面的是容器的目录）自动创建宿主机的目录；
-//--restart<span class="token operator">=</span>always：随docker服务的启动而启动！<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p> <img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210705203256085.png" alt="image-20210705203256085"></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># docker tag  centos:7 192.168.45.129:5000/centos:7  </span>
-//更改镜像名称
-注：私有仓库镜像的命名规则：192.168.45.129:5000/XXX（宿主机的IP:5000端口/镜像名称）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210705203355817.png" alt="image-20210705203355817"></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># vim /usr/lib/systemd/system/docker.service   //修改docker主配置文件</span>
-<span class="token assign-left variable">ExecStart</span><span class="token operator">=</span>/usr/bin/dockerd    --insecure-registry <span class="token number">192.168</span>.45.129:5000  
-//修改原本的配置文件添加不安全的仓库（--insecure-registry），地址是宿主机的IP地址与5000端口
-<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># systemctl daemon-reload </span>
-<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># systemctl restart docker             //重新启动docker服务</span>
-<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># docker push  192.168.45.129:5000/centos:7</span>
-//将重命名后的镜像上传到registry私有仓库
-<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># curl 192.168.45.129:5000/v2/_catalog             //查看私有仓库中的镜像</span>
-<span class="token punctuation">{</span><span class="token string">"repositories"</span>:<span class="token punctuation">[</span><span class="token string">"centos"</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
-<span class="token punctuation">[</span>root@dockerA ~<span class="token punctuation">]</span><span class="token comment"># curl 192.168.45.129:5000/v2/centos/tags/list         //查看镜像的详细信息</span>
-<span class="token punctuation">{</span><span class="token string">"name"</span><span class="token builtin class-name">:</span><span class="token string">"centos"</span>,<span class="token string">"tags"</span>:<span class="token punctuation">[</span><span class="token string">"7"</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>dockerB：</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># vim /usr/lib/systemd/system/docker.service </span>
-//修改docker的主配置文件
- <span class="token assign-left variable">ExecStart</span><span class="token operator">=</span>/usr/bin/dockerd --insecure-registry <span class="token number">192.168</span>.45.129:5000
-//添加内容与registry一致，指定registry私有仓库服务器的IP地址及端口
-<span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># systemctl daemon-reload </span>
-<span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># systemctl restart docker            //重新启动docker服务</span>
-<span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># curl 192.168.45.129:5000/v2/_catalog         //查看私有仓库中的镜像</span>
-<span class="token punctuation">{</span><span class="token string">"repositories"</span>:<span class="token punctuation">[</span><span class="token string">"centos"</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
-<span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># curl 192.168.45.129:5000/v2/centos/tags/list     //查看私有仓库中的镜像</span>
-<span class="token punctuation">{</span><span class="token string">"name"</span><span class="token builtin class-name">:</span><span class="token string">"centos"</span>,<span class="token string">"tags"</span>:<span class="token punctuation">[</span><span class="token string">"7"</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
-<span class="token punctuation">[</span>root@dockerB ~<span class="token punctuation">]</span><span class="token comment"># docker pull 192.168.45.129:5000/centos:7</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210705203542638.png" alt="image-20210705203542638"></p>
-<h3 id="集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？"><a href="#集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？" class="headerlink" title="集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？"></a>集群中时间同步的方式有哪两种？客户端使用什么命令查看时间是否同步成功？</h3><p>答：有chrony服务和ntp服务；chrony服务：在客户端节点执行<code>chronyc sources -v</code>，结果中包含*，则代表同步成功。如果结果中有？，则代表同步不成功，需要等待。ntp服务：执行<code>ntpstat</code>命令</p>
-<p>NTP配置详细：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vi</span> /etc/ntp.conf
-           ntpdate server IP   
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><em>重启ntpd服务。</em></p>
-<p><em>跳跃同步，使用ntpdate不能开启ntpd服务</em></p>
-<p>拓展：</p>
-<p>搭建NTP时间服务器(服务端配置)</p>
-<p><em>解释：自己搭建一台NTP服务器，然后其它机器同步这台NTP时间服务器上的时间，而NTP时间服务器同步公网上远程机器的时间，从而实现整套集群保持与北京时间同步。</em></p>
-<p>安装ntp（NTP服务端的包名）</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@m01 ~<span class="token punctuation">]</span><span class="token comment"># hostname -I</span>
-<span class="token number">10.0</span>.0.61 <span class="token number">172.16</span>.1.61
-<span class="token punctuation">[</span>root@m01 ~<span class="token punctuation">]</span><span class="token comment"># yum install ntp</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>启动ntpd服务</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@m01 ~<span class="token punctuation">]</span><span class="token comment"># systemctl start ntpd</span>
-<span class="token punctuation">[</span>root@m01 ~<span class="token punctuation">]</span><span class="token comment"># systemctl enable ntpd</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>其它内网机器同步NTP时间服务器(172.16.1.61)</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@lb01 ~<span class="token punctuation">]</span><span class="token comment"># hostname -I</span>
-<span class="token number">172.16</span>.1.5 
-<span class="token punctuation">[</span>root@lb01 ~<span class="token punctuation">]</span><span class="token comment"># yum install ntpdate -y</span>
-<span class="token punctuation">[</span>root@lb01 ~<span class="token punctuation">]</span><span class="token comment"># date -s '20081024'</span>
-<span class="token punctuation">[</span>root@lb01 ~<span class="token punctuation">]</span><span class="token comment"># ntpdate 172.16.1.61</span>
-<span class="token punctuation">[</span>root@lb01 ~<span class="token punctuation">]</span><span class="token comment"># date</span>
-Fri Oct <span class="token number">19</span> <span class="token number">10</span>:35:35 CST <span class="token number">2018</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>ntpd服务只要启动，自动会在后台为这台NTP服务器同步时间(可能需要等几分钟)，不需要我们手动操作，其它机器只需同步这台NTP服务器即可。</p>
-<p>命令：<code>ntpstat</code>，查看是否成功</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># ntpstat</span>
-
-unsynchronised
-
-  <span class="token function">time</span> server re-starting
-
-   polling server every <span class="token number">8</span> s <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>chrony配置详细：<br>     1、 server端：<br>      （1）安装包</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> chrony<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>​      （2）修改配置文件 <code>vi /etc/chrony.conf</code><br>​            ①将原有server开头的注释掉<br>​            ②在文件最后追加以下内容<br>​                    </p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">local</span> stratum <span class="token number">10</span> //不同步外部时钟源
-                    server master iburst//自己做时钟源
-                    allow all //允许所有客户端同步我这个时钟源，使用我做时钟源服务器
-     <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>（3）重启服务</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">systemctl restart chronyd  <span class="token operator">&amp;&amp;</span> systemctl <span class="token builtin class-name">enable</span> chronyd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>​     2、client端<br>​         （1）安装包<code>yum install chrony</code><br>​         （2）修改配置文件 ``vi /etc/chrony.conf<code>​               ①将原有server开头的注释掉 ​               ②在文件最后追加以下内容 ​                 </code>server 10.1.0.10 iburst  //配置10.1.0.10<code>为时钟源 ​           （3）重启服务 ​                 </code>systemctl restart chronyd  &amp;&amp; systemctl enable chronyd`</p>
+<p>使用快捷键的时候会有时有卡住输入不了内容的情况，可以使用 <code>alt + tab</code>切换一下界面就好了。</p>
+<p>效果图：</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/152835oj88ubunzv8jjubn.gif" alt="img"></p>
+<h2 id="批注"><a href="#批注" class="headerlink" title="批注"></a>批注</h2><blockquote>
+<p>AutoHotkey 是一个自由、开源的宏生成器和自动化软件工具，它让用户能够自动执行重复性任务。AutoHotkey 可以修改任何应用程序的用户界面（例如，把默认的 Windows 按键控制命令替换为 Emacs 风格）。它是由定制的脚本语言驱动，旨在提供键盘快捷键或热键。——wikipedia</p>
+</blockquote>
+<p>简单理解为一种自动化脚本语言，它可以帮助我们完成大量重复性的工作。</p>
 
                 
             </div>
@@ -777,7 +712,7 @@ unsynchronised
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://a1561532803.github.io/yueguang.github.io/posts/57113.html">https://a1561532803.github.io/yueguang.github.io/posts/57113.html</a>
+                    <a href="https://a1561532803.github.io/yueguang.github.io/posts/7249.html">https://a1561532803.github.io/yueguang.github.io/posts/7249.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -815,8 +750,12 @@ unsynchronised
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/docker/">
-                                    <span class="chip bg-color">docker</span>
+                                <a href="/tags/typora/">
+                                    <span class="chip bg-color">typora</span>
+                                </a>
+                            
+                                <a href="/tags/AutoHotkey/">
+                                    <span class="chip bg-color">AutoHotkey</span>
                                 </a>
                             
                         </div>
@@ -1249,16 +1188,18 @@ unsynchronised
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/26626.html">
+                <a href="/posts/7249.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/zygxhp/picture/raw/master/img/docker.jpg" class="responsive-img" alt="docker复习——实训篇">
                         
-                        <span class="card-title">docker复习——实训篇</span>
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="typora辅助工具——快捷标注颜色">
+                        
+                        <span class="card-title">typora辅助工具——快捷标注颜色</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1268,26 +1209,31 @@ unsynchronised
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
-                                    运维
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/docker/">
-                        <span class="chip bg-color">docker</span>
+                    <a href="/tags/typora/">
+                        <span class="chip bg-color">typora</span>
+                    </a>
+                    
+                    <a href="/tags/AutoHotkey/">
+                        <span class="chip bg-color">AutoHotkey</span>
                     </a>
                     
                 </div>
@@ -1301,13 +1247,13 @@ unsynchronised
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/21396.html">
+                <a href="/posts/13804.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="欢迎来到我的个人博客">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="爬虫——基础篇">
                         
-                        <span class="card-title">欢迎来到我的个人博客</span>
+                        <span class="card-title">爬虫——基础篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1318,14 +1264,14 @@ unsynchronised
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%BC%80%E5%8F%91/" class="post-category">
-                                    web开发
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -1335,8 +1281,8 @@ unsynchronised
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%88%86%E4%BA%AB/">
-                        <span class="chip bg-color">分享</span>
+                    <a href="/tags/%E7%88%AC%E8%99%AB/">
+                        <span class="chip bg-color">爬虫</span>
                     </a>
                     
                 </div>

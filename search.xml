@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>typora辅助工具——快捷标注颜色</title>
+      <link href="/posts/7249.html"/>
+      <url>/posts/7249.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="typora辅助工具——快捷标注颜色，添加标签"><a href="#typora辅助工具——快捷标注颜色，添加标签" class="headerlink" title="typora辅助工具——快捷标注颜色，添加标签"></a>typora辅助工具——快捷标注颜色，添加标签</h1><blockquote><p>本文参考自leqaq</p><p>原文地址：<a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1447470&amp;ctid=2336">https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1447470&amp;ctid=2336</a></p></blockquote><h2 id="安装AutoHotkey"><a href="#安装AutoHotkey" class="headerlink" title="安装AutoHotkey"></a>安装AutoHotkey</h2><p>Typora 是一款支持实时预览的 Markdown 文本编辑器，功能强大，页面美观，但在Typora中，想要加颜色或者加大某个字体很不方便，只能使用 HTML 标签去包裹内容再去写入css属性，这样就显得很麻烦。</p><p>比如我给一个字体增加颜色，得这样加上font标签才会生效</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210710174425002.png" alt="image-20210710174425002"></p><p><font color="red" font-size="30px">这是一个测试</font></p><p>↑这是刚才代码的效果</p><p>使用 font 标签要写没这么长一串，也太麻烦了，所以找了个简便办法，就是——<strong>AutoHotkey</strong></p><p>AutoHotkey是一款界面简洁的功能强大的热键脚本语言，可以将所有的键盘操作和鼠标操作自动化。</p><p>首先得去官网安装一下，安装包很小。</p><p>官网：<a href="https://www.autohotkey.com/">https://www.autohotkey.com/</a></p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210710174624451.png" alt="image-20210710174624451"></p><p>下载好后进行安装，安装成功后就可以开始编写脚本了！</p><h2 id="编写ahk脚本"><a href="#编写ahk脚本" class="headerlink" title="编写ahk脚本"></a>编写ahk脚本</h2><p>新建一个 txt 文本文件，添加以下内容，之后将后缀修改为.ahk</p><pre class="line-numbers language-none"><code class="language-none">;热键标记; !感叹号代表Alt键; # 井号代表 Windows 键; ^ 上三角号代表 Ctrl键; + 加号代表 Shift 键; 执行; ::代表按下前面快捷键后会执行后面的命令。; Typora; 快捷增加字体颜色; SendInput {Text} 解决中文输入法问题#IfWinActive ahk_exe Typora.exe{    ; alt+0 红色    !0::addFontColor("black")    ; alt+1 红色    !1::addFontColor("red")    ; alt+1 橙色    !2::addFontColor("orange")      ; alt+3 浅蓝色    !3::addFontColor("cornflowerblue")     ; alt+4 绿色    !4::addFontColor("green")     ; alt+5 青色    !5::addFontColor("cyan")     ; alt+6 紫色    !6::addFontColor("purple")     ; alt+7 黄色    !7::addFontColor("yellow")    ; 增加 字体框    !f::addFont()    ;增加 div 标签    !d::addDiv()    ;增加 ` 号    !`::addPunctuation()}; 快捷增加字体颜色addFontColor(color){    clipboard := "" ; 清空剪切板    Send {ctrl down}c{ctrl up} ; 复制    SendInput {TEXT}&lt;font color='%color%'&gt;    SendInput {ctrl down}v{ctrl up} ; 粘贴    If(clipboard = ""){        ; Typora 在这不会自动补充        SendInput {TEXT}&lt;/font&gt;         ; 清空剪切板        clipboard := ""     }else{        ; Typora中自动补全标签        SendInput {TEXT}&lt;/     }}; 添加 font 标签addFont(){    clipboard := "" ; 清空剪切板    Send {ctrl down}c{ctrl up} ; 复制    SendInput {TEXT}&lt;font style="color:;font-size:"&gt;    SendInput {ctrl down}v{ctrl up} ; 粘贴    If(clipboard = ""){        SendInput {TEXT}&lt;/font&gt; ; Typora 在这不会自动补充          clipboard := "" ; 清空剪切板    }else{        SendInput {TEXT}&lt;/ ; Typora中自动补全标签    } }    ; 添加 Div 标签addDiv(){    clipboard := "" ; 清空剪切板    Send {ctrl down}c{ctrl up} ; 复制    SendInput {TEXT}&lt;div style=""&gt;    SendInput {ctrl down}v{ctrl up} ; 粘贴    If(clipboard = ""){        SendInput {TEXT}&lt;/div&gt; ; Typora 在这不会自动补充          clipboard := "" ; 清空剪切板    }else{        SendInput {TEXT}&lt;/ ; Typora中自动补全标签    }}addPunctuation(){    clipboard := "" ; 清空剪切板    Send {ctrl down}c{ctrl up} ; 复制    SendInput {TEXT}``    SendInput {ctrl down}v{ctrl up} ; 粘贴    SendInput {TEXT}``}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>将上述内容复制进去，可以自己进行修改，注释也很清除，有编程基础的可以自己进行修改。</p><p>保存之后可以直接选择.ahk文件，右键点击 <code>run script</code>，也可以使用 AutoHotkey 的 convert .ahk to .exe 将文件转为 exe 程序方便使用。</p><p>之后当typora运行时，右键选中需要标注颜色的内容</p><ul><li>按下 alt+数字键 0 - 7 可以添加颜色，具体颜色看注释</li><li><code>alt + d</code> 添加 div 标签，方便做内容居中 <div style=""></div></li><li><code>alt + f </code>添加 font 标签，方便自定义颜色和字体大小 <font style="color:;font-size:"></font></li><li><code>alt + </code> `给内容加上标记，也是加上一种颜色（对应格式→代码）</li></ul><p>使用快捷键的时候会有时有卡住输入不了内容的情况，可以使用 <code>alt + tab</code>切换一下界面就好了。</p><p>效果图：</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/152835oj88ubunzv8jjubn.gif" alt="img"></p><h2 id="批注"><a href="#批注" class="headerlink" title="批注"></a>批注</h2><blockquote><p>AutoHotkey 是一个自由、开源的宏生成器和自动化软件工具，它让用户能够自动执行重复性任务。AutoHotkey 可以修改任何应用程序的用户界面（例如，把默认的 Windows 按键控制命令替换为 Emacs 风格）。它是由定制的脚本语言驱动，旨在提供键盘快捷键或热键。——wikipedia</p></blockquote><p>简单理解为一种自动化脚本语言，它可以帮助我们完成大量重复性的工作。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> typora </tag>
+            
+            <tag> AutoHotkey </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>爬虫——基础篇</title>
       <link href="/posts/13804.html"/>
       <url>/posts/13804.html</url>
