@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>游戏行业报告解析</title>
+      <link href="/posts/21128.html"/>
+      <url>/posts/21128.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="游戏行业报告解析——U3D方向"><a href="#游戏行业报告解析——U3D方向" class="headerlink" title="游戏行业报告解析——U3D方向"></a>游戏行业报告解析——U3D方向</h1><blockquote><p>课程来自：vipskill</p></blockquote><h2 id="行业报告总结"><a href="#行业报告总结" class="headerlink" title="行业报告总结"></a>行业报告总结</h2><p>1、中国游戏全球化、工业化进程开始，未来几年会保持高速增长</p><p>2、自创IP越来越重要，同质化玩法单一的问题越来越明显，独立游戏会成为创意游戏很大的补充</p><p>3、RPG类可以在求职时加分</p><p>拓展：</p><p>VR可能是未来的大趋势，但现在受限严重。</p><h2 id="U3D工程师职业发展四象限"><a href="#U3D工程师职业发展四象限" class="headerlink" title="U3D工程师职业发展四象限"></a>U3D工程师职业发展四象限</h2><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210713205424056.png" alt="image-20210713205424056"></p><p>如：程序向转的TA就是高级开发阶段</p><p>主程往往对应其他项目岗位开发的部门经理，有些公司主程就是总监</p><h2 id="U3D工程师职级体系"><a href="#U3D工程师职级体系" class="headerlink" title="U3D工程师职级体系"></a>U3D工程师职级体系</h2><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210713205713924.png" alt="image-20210713205713924"></p><p><strong>实习阶段：</strong></p><p>实习经验可以提高毕业后的求职成功率。</p><p>游戏公司实习经历分享：看主程的UI框架文档，看了两个星期，之后独立完成一个功能模块。</p><p><strong>高级阶段：</strong></p><p>知道原理就够了，不要重复造轮子。</p><p>有些高级工程师的能力是高于主程的。</p><p><strong>主程：</strong></p><p>参与过很多项目的全流程开发。</p><p>有很强的管理能力。</p><p><strong>技术总监：</strong></p><p>一般懂游戏，但不</p><p>参与游戏开发，不需要写代码。</p><p>需要在技术、管理能力上都非常出众。</p><h2 id="U3D行业工资表（2018年-2019年）"><a href="#U3D行业工资表（2018年-2019年）" class="headerlink" title="U3D行业工资表（2018年-2019年）"></a>U3D行业工资表（2018年-2019年）</h2><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210713210812458.png" alt="image-20210713210812458"></p><p>除了初级和实习，其余阶段平均上涨30%。</p><p>游戏公司内的功能一般不是指单一功能，而是一整个体系。</p><p>不要抱着掌握所有东西的想法，至少在概念上面熟知即可。</p><p>对于U3D工程师来说，shader只是加分项目，不是必学的。</p><h2 id="U3D学习阶段"><a href="#U3D学习阶段" class="headerlink" title="U3D学习阶段"></a>U3D学习阶段</h2><p>p1阶段</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210713211515174.png" alt="image-20210713211515174"></p><p>数学决定天花板 : (，计算机基础大厂考，中小厂不会问。</p><p>开发语言的Lua很重要，稍微有点规模的游戏公司都是用Lua。</p><p><strong>热更新</strong>：不停机更新（意为设备是烫的，没关机），在游戏里面指不需要去商店下载客户端。</p><p>一般是游戏资源更新（非代码以外的东西都叫游戏资源），本质上没有很难，不需要lua就能实现，技术点在于资源管理，难点在于逻辑更新。</p><p>C#和lua可以互相通信（互相调用对方的函数，主要是通过C#来调用）用C#当壳，去读Lua的string内容，市场上目前使用该方式解决热更新问题。</p><p>技能掌握（部分图）</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210713213423873.png" alt="image-20210713213423873"></p><h2 id="实习、校招、社招"><a href="#实习、校招、社招" class="headerlink" title="实习、校招、社招"></a>实习、校招、社招</h2><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210713213515178.png" alt="image-20210713213515178"></p><p>校招：</p><p>算法熟练特指基础算法、尤其是排序部分。</p><p>其他方向的算法能听懂就行，如果让你手写二叉树，可能是不打算招你了。</p><p>如果作品选型是单机游戏，推荐选ARPG（动作角色扮演游戏），网络部分推荐选MMORPG（大型多人在线角色扮演游戏）</p><p>热更新部分在会写Lua就够了。</p><p>游戏行业的招聘门槛在上升，校招的价格会比较便宜。</p><p>竞争对手是和自己一样经验的人。</p><p>有没有商业项目在面试官眼里天壤之别。</p><p>实在没项目经验，可以去卡牌类的游戏公司过渡。</p><p>刚入行推荐先从UI开始。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 行业分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 游戏 </tag>
+            
+            <tag> U3D </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>typora辅助工具——快捷标注颜色</title>
       <link href="/posts/7249.html"/>
       <url>/posts/7249.html</url>
