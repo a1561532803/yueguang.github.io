@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>从零开始学Unity——基本操作（1）</title>
+      <link href="/posts/16191.html"/>
+      <url>/posts/16191.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="从零开始学Unity（1）"><a href="#从零开始学Unity（1）" class="headerlink" title="从零开始学Unity（1）"></a>从零开始学Unity（1）</h1><h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p>打开unity hub，项目栏里，右上角选择新建，创建一个2D项目，名字随便起。之后单机创建，创建过程会比较慢。<img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717165420908.png" alt="image-20210717165420908"></p><p><strong>拓展：打开别人的项目</strong></p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717165858226.png" alt="image-20210717165858226"></p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717170024809.png" alt="image-20210717170024809"></p><p>选中要导入的项目即可，然后在项目列表里面双击该项目即可打开。</p><p><strong>移除项目：</strong></p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717170137422.png" alt="image-20210717170137422"></p><p>注：移除后项目还在，只是不显示在这个列表里。</p><p><em>批注：屏幕越大，cpu越快，效果越好。</em></p><h2 id="编辑器界面"><a href="#编辑器界面" class="headerlink" title="编辑器界面"></a>编辑器界面</h2><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717170409916.png" alt="image-20210717170409916"></p><p>注：我的界面自己做了修改，一般的位置不是这样。</p><p>想要恢复默认布局，可以单机顶部的window选项，选择layouts→Default</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717170739604.png" alt="image-20210717170739604"></p><p>main Camera主摄像机，就是Scene界面的摄像机。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717170550951.png" alt="image-20210717170550951"></p><h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><h3 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h3><p>场景 <font color="cornflowerblue">Scene</font>，就是一个游戏里的场景/关卡</p><p>例子：小猪佩奇</p><p>场景1：家中</p><p>场景2：户外</p><p>显然，该游戏/动画中，至少有两个场景</p><h3 id="2、创建场景"><a href="#2、创建场景" class="headerlink" title="2、创建场景"></a>2、创建场景</h3><p>当创建项目时，默认地会创建一个场景<img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717171334133.png" alt="image-20210717171334133"></p><p>Assets 资产/资源，项目里的所有资源都放在Assets目录下面，在Scenes里面已经默认创建了一个场景。</p><p><strong>添加新场景：</strong></p><p>在project栏，Scenes目录下，单机右键，选择Create→Scene<img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717171657344.png" alt="image-20210717171657344"></p><p>如何删除？</p><p>右键要删除的场景，选择delete即可删除。</p><h2 id="添加资源"><a href="#添加资源" class="headerlink" title="添加资源"></a>添加资源</h2><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717171912215.png" alt="image-20210717171912215"></p><p>演示：将准备好的图片文件添加到项目中</p><p>方法一：直接将图片拖到Assets目录下</p><p>方法二：</p><p>右键<font color="cornflowerblue">Show in Explorer</font>，观察素材文件（能直接打开素材锁在文件）</p><p>-素材文件会拷贝到<font color="cornflowerblue">Assets</font>目录下</p><p>-每一条素材/目录，对应一个<font color="cornflowerblue">*.meta</font>文件</p><p>注意：<img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210717173006415.png" alt="image-20210717173006415"></p><h2 id="场景视图"><a href="#场景视图" class="headerlink" title="场景视图"></a>场景视图</h2><h3 id="1、场景中的几个操作"><a href="#1、场景中的几个操作" class="headerlink" title="1、场景中的几个操作"></a>1、场景中的几个操作</h3><p>鼠标中键（滚轮）：放大/缩小视图</p><p>鼠标右键拖拽：平移视图</p><h3 id="2、一个网格对应多大？"><a href="#2、一个网格对应多大？" class="headerlink" title="2、一个网格对应多大？"></a>2、一个网格对应多大？</h3><p>（一般是由团队规定的），对应屏幕的话一般是100像素</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718035056472.png" alt="image-20210718035056472"></p><p>只有白框里的才是玩家可见的范围（也就是Game窗口）</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718035224243.png" alt="image-20210718035224243"></p><h2 id="游戏对象"><a href="#游戏对象" class="headerlink" title="游戏对象"></a>游戏对象</h2><h3 id="1、游戏对象是什么？"><a href="#1、游戏对象是什么？" class="headerlink" title="1、游戏对象是什么？"></a>1、游戏对象是什么？</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718035305748.png" alt="image-20210718035305748"></p><h3 id="2、移动视图与一些简单操作"><a href="#2、移动视图与一些简单操作" class="headerlink" title="2、移动视图与一些简单操作"></a>2、移动视图与一些简单操作</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718040359253.png" alt="image-20210718040359253"></p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718040427919.png" alt="image-20210718040427919"></p><p>拖动这个小方块可以随意移动元素位置。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718040517593.png" alt="image-20210718040517593"></p><h2 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h2><h3 id="1、坐标单位"><a href="#1、坐标单位" class="headerlink" title="1、坐标单位"></a>1、坐标单位</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718040756785.png" alt="image-20210718040756785"></p><h3 id="2、Z坐标"><a href="#2、Z坐标" class="headerlink" title="2、Z坐标"></a>2、Z坐标</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718040837358.png" alt="image-20210718040837358"></p><p>单机此处，2D和3D是可以自由切换的。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718040951516.png" alt="image-20210718040951516"></p><p>2D所有的对象都在一个平面进行，Z坐标也都是0。</p><p>3D视图导航器<font color="cornflowerblue">Gizmo</font>，较难操作，暂不介绍。</p><h2 id="游戏对象的操作"><a href="#游戏对象的操作" class="headerlink" title="游戏对象的操作"></a>游戏对象的操作</h2><h3 id="1、旋转效果"><a href="#1、旋转效果" class="headerlink" title="1、旋转效果"></a>1、旋转效果</h3><p>顶部导航的第三个工具键，修改该选项意为逆时针旋转90°。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718041249150.png" alt="image-20210718041249150"></p><p>可以自己调，也可以在inspector自己设置（其他效果也可以这样设置）。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718041436910.png" alt="image-20210718041436910"></p><h3 id="2、缩放效果"><a href="#2、缩放效果" class="headerlink" title="2、缩放效果"></a>2、缩放效果</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718041510920.png" alt="image-20210718041510920"></p><h3 id="3、矩形工具"><a href="#3、矩形工具" class="headerlink" title="3、矩形工具"></a>3、矩形工具</h3><p>顶部导航的第五个工具。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718041526857.png" alt="image-20210718041526857"></p><h3 id="4、要点与细节"><a href="#4、要点与细节" class="headerlink" title="4、要点与细节"></a>4、要点与细节</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718041644409.png" alt="image-20210718041644409"></p><h2 id="摄像机"><a href="#摄像机" class="headerlink" title="摄像机"></a>摄像机</h2><h3 id="1、摄像机的参数"><a href="#1、摄像机的参数" class="headerlink" title="1、摄像机的参数"></a>1、摄像机的参数</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718041948003.png" alt="image-20210718041948003"></p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718042142690.png" alt="image-20210718042142690"></p><p>宽度是由具体的显示窗口决定的，常见的窗体比例为16:9。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718042248909.png" alt="image-20210718042248909"></p><h3 id="2、要点与细节"><a href="#2、要点与细节" class="headerlink" title="2、要点与细节"></a>2、要点与细节</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210718042339409.png" alt="image-20210718042339409"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unity </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 游戏 </tag>
+            
+            <tag> U3D </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>游戏行业报告解析</title>
       <link href="/posts/21128.html"/>
       <url>/posts/21128.html</url>
@@ -14,6 +41,8 @@
       <categories>
           
           <category> 行业分析 </category>
+          
+          <category> Unity </category>
           
       </categories>
       
@@ -179,25 +208,6 @@
             <tag> 分享 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/posts/16107.html"/>
-      <url>/posts/16107.html</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 测试 </category>
-          
-      </categories>
-      
       
     </entry>
     
