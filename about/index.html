@@ -364,6 +364,13 @@
     .about-cover {
         height: 75vh;
     }
+    /*头像旋转效果，取消要记得去matery.css里面将avatar-img的注释解开*/
+    .site-author-image:hover{
+    transform: rotate(666turn);
+    transition-duration: 60s;
+    transition-timing-function: cubic-bezier(.34, 0, .84, 1);
+    }
+
 </style>
 
 <div class="bg-cover pd-header about-cover">
@@ -441,7 +448,7 @@
                         <div class="profile center-align">
                             <div class="avatar">
                                 <img src="/medias/girl.jpg" alt="在月光下滑坡"
-                                     class="circle responsive-img avatar-img">
+                                     class="circle responsive-img avatar-img site-author-image">
                             </div>
                             <div class="author">
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
@@ -948,6 +955,8 @@
         });
     });
 </script>
+
+                
 
                 
 

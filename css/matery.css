@@ -1641,11 +1641,18 @@ thead {
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
 }
 
-.profile .avatar-img {
+.profile {
+    max-width: 165px;
+    width: 100%;
+    margin: 3.2rem auto;
+    transform: translate3d(0, -65%, 0);
+}
+.avatar-img {
     max-width: 160px;
     width: 100%;
-    margin: 0 auto;
-    transform: translate3d(0, -65%, 0);
+    margin: 1.55rem auto;
+    
+    /* transform: translate3d(0, -65%, 0); */
 }
 
 .profile .author {
@@ -1660,11 +1667,14 @@ thead {
     margin-bottom: 0.1rem;
     font-size: 1.8rem;
     font-weight: 500;
-    color: #3C4858;
+    color: #374455;
+    
 }
-
+.author{
+    padding-top: 3.25rem;
+}
 .profile .author .career {
-    margin: 8px 0;
+    margin: 7px 0;
     font-size: 0.9rem;
     font-weight: 400;
     color: #777;
