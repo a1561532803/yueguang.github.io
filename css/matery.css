@@ -1644,7 +1644,7 @@ thead {
 .profile {
     max-width: 165px;
     width: 100%;
-    margin: 3.2rem auto;
+    margin: 1.5rem auto;
     transform: translate3d(0, -65%, 0);
 }
 .avatar-img {
@@ -1671,7 +1671,7 @@ thead {
     
 }
 .author{
-    padding-top: 3.25rem;
+    padding-top: 3.5rem;
 }
 .profile .author .career {
     margin: 7px 0;
@@ -1685,7 +1685,7 @@ thead {
 }
 
 #aboutme .introduction {
-    margin: 1.5rem auto 3rem;
+    margin: .5rem auto 3rem auto;
     max-width: 600px;
     color: #999;
 }
