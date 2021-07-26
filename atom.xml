@@ -6,7 +6,7 @@
   <link href="https://a1561532803.github.io/yueguang.github.io/atom.xml" rel="self"/>
   
   <link href="https://a1561532803.github.io/yueguang.github.io/"/>
-  <updated>2021-07-17T20:29:19.584Z</updated>
+  <updated>2021-07-25T17:35:03.672Z</updated>
   <id>https://a1561532803.github.io/yueguang.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS入门教程——DOM基础速成</title>
+    <link href="https://a1561532803.github.io/yueguang.github.io/posts/12489.html"/>
+    <id>https://a1561532803.github.io/yueguang.github.io/posts/12489.html</id>
+    <published>2021-07-25T16:04:00.000Z</published>
+    <updated>2021-07-25T17:35:03.672Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JS入门教程——DOM基础速成"><a href="#JS入门教程——DOM基础速成" class="headerlink" title="JS入门教程——DOM基础速成"></a>JS入门教程——DOM基础速成</h1><h2 id="什么是DOM"><a href="#什么是DOM" class="headerlink" title="什么是DOM"></a>什么是DOM</h2><p>DOM即Document Object Model，也叫文档对象模型，是W3C制定的标准接口规范，是一种处理HTML和XML文件的标准API。</p><h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><h3 id="1、getElementsByTagName"><a href="#1、getElementsByTagName" class="headerlink" title="1、getElementsByTagName"></a>1、getElementsByTagName</h3><p>可以取到html的标签名，如、</p><li>等等<p></p><h3 id="2、getElementsByClassName"><a href="#2、getElementsByClassName" class="headerlink" title="2、getElementsByClassName"></a>2、getElementsByClassName</h3><p>示例html代码，这里给了li一个背景色的Css样式（图上没写）<img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210725203014894.png" alt="image-20210725203014894"></p><p>执行命令，效果，取到list的class</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210725203154740.png" alt="image-20210725203154740"></p><p><code>getElementById</code>同理，只是取的类型变成了id类型。</p><h3 id="3、querySelector"><a href="#3、querySelector" class="headerlink" title="3、querySelector"></a><strong>3、querySelector</strong></h3><p>该命令使用较多，可以更准确的进行选择，<code>querySelector</code>为从上至下，取第一个需要的内容。</p><p>要取到所有的内容得输入<code>querySelectorAll</code>，示例1的html是第2条的html代码。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210725203633282.png" alt="image-20210725203633282"></p><p>示例2，获取指定标签下的指定内容</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210725204040053.png" alt="image-20210725204040053"></p><h3 id="4、控制命令做一些效果吧！"><a href="#4、控制命令做一些效果吧！" class="headerlink" title="4、控制命令做一些效果吧！"></a>4、控制命令做一些效果吧！</h3><p>示例：修改CSS颜色</p><p>先取到要控制的对象，然后再其后添加<code>.style.color=""</code></p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210725204504034.png" alt="image-20210725204504034"></p><p>在.style里面，几乎可以修改所有的样式。</p><p>可以去w3c的网站查看.style的所有属性。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210725204809455.png" alt="image-20210725204809455"></p><p>给按钮添加点击变色事件</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210726004713474.png" alt="image-20210726004713474"></p><p>addEventListener(事件名，当这个事件被触发时执行什么内容)</p></li>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;JS入门教程——DOM基础速成&quot;&gt;&lt;a href=&quot;#JS入门教程——DOM基础速成&quot; class=&quot;headerlink&quot; title=&quot;JS入门教程——DOM基础速成&quot;&gt;&lt;/a&gt;JS入门教程——DOM基础速成&lt;/h1&gt;&lt;h2 id=&quot;什么是DOM&quot;&gt;&lt;a hr</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://a1561532803.github.io/yueguang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="javaScript" scheme="https://a1561532803.github.io/yueguang.github.io/tags/javaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>从零开始学Unity——基本操作（1）</title>
