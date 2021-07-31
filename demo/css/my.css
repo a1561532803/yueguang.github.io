@@ -1,1 +1,11 @@
 /* Here is your custom css styles. */
+.center_content {
+  text-align: center;
+}
+a {
+  line-height: 3em;
+  color: #097a38;
+}
+a:hover {
+  color: #2a51a5;
+}
