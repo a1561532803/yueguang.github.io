@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="docker复习——实训篇, HTML,CSS,JavaScript,JQuery,Vue.js,photoshop,Unity,UE等">
+    <meta name="keywords" content="从零开始学Unity——基本操作（2）, HTML,CSS,JavaScript,JQuery,Vue.js,photoshop,Unity,UE等">
     <meta name="description" content="分享知识,分享经验,偶尔写点段子">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>docker复习——实训篇 | 在月光下滑坡</title>
+    <title>从零开始学Unity——基本操作（2） | 在月光下滑坡</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -363,12 +363,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/zygxhp/picture/raw/master/img/docker.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">docker复习——实训篇</h1>
+                    <h1 class="description center-align post-title">从零开始学Unity——基本操作（2）</h1>
                 </div>
             </div>
         </div>
@@ -484,8 +484,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/docker/">
-                                <span class="chip bg-color">docker</span>
+                            <a href="/tags/%E6%B8%B8%E6%88%8F/">
+                                <span class="chip bg-color">游戏</span>
+                            </a>
+                        
+                            <a href="/tags/U3D/">
+                                <span class="chip bg-color">U3D</span>
                             </a>
                         
                     </div>
@@ -496,8 +500,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
-                                运维
+                            <a href="/categories/Unity/" class="post-category">
+                                Unity
                             </a>
                         
                     </div>
@@ -509,28 +513,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-06
+                    2021-08-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-06
+                    2021-08-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    563
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    1 分
                 </div>
                 
 
@@ -548,438 +552,55 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Docker安装："><a href="#Docker安装：" class="headerlink" title="Docker安装："></a>Docker安装：</h2><blockquote>
-<p>此题必会(本地yum源法)：<strong>使用xserver1节点，自行配置YUM源，安装docker服务（(需要用到的包为xserver1节点/root目录下的Docker.tar.gz)。安装完服务后，将registry_latest.tar上传到xserver1节点中并配置为私有仓库。要求启动registry容器时，将内部保存文件的目录映射到外部的/opt)/registry目录，将内部的5000端口映射到外部5000端口。依次将启动registry容器的命令及返回结果、执行docker info命令的返回结果以文本形式提交到答题框。</strong></p>
-</blockquote>
-<p>答：</p>
-<p>1、先配置yum源：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># cd /etc/yum.repos.d/</span>
-
-<span class="token punctuation">[</span>root@xserver1 yum.repos.d<span class="token punctuation">]</span><span class="token comment">#mv * /media/  #将目录底下的源全部移走</span>
-
-<span class="token punctuation">[</span>root@xserver1 yum.repos.d<span class="token punctuation">]</span><span class="token comment"># vi local.repo</span>
-
-<span class="token punctuation">[</span>docker<span class="token punctuation">]</span>
-
-<span class="token assign-left variable">name</span><span class="token operator">=</span>docker
-
-<span class="token assign-left variable">baseurl</span><span class="token operator">=</span>file:///root/Docker
-
-<span class="token assign-left variable">gpgcheck</span><span class="token operator">=</span><span class="token number">0</span>
-
-<span class="token assign-left variable">enabled</span><span class="token operator">=</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>输入完成之后按键盘上的ESC键退出插入模式，最后一行没有出现– INSERT –就可以输入：<code>wq</code> （保存且退出）</p>
-<p>2、回到家目录，解压家目录下的Docker.tar.gz包：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 yum.repos.d<span class="token punctuation">]</span><span class="token comment"># cd       #回到家目录</span>
-
-<span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># ll            #查看是否有Docker.tar.gz包</span>
-
-``<span class="token variable"><span class="token variable">`</span>
-<span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># tar -zxvf Docker.tar.gz   #解压包</span>
-<span class="token variable">`</span></span>``<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>3、下载docker包：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># yum -y install docker-ce</span>
-
- <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>4、开启docker服务：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># systemctl start docker</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>5、上传registry_latest.tar包</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># cd images/</span>
-
-<span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># ll       #查看该目录下有无registry_latest.tar包</span>
-
-<span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker load -i registry_latest.tar</span>
-
-d9ff549177a9: Loading layer  <span class="token number">4</span>.671MB/4.671MB
-
-f641ef7a37ad: Loading layer  <span class="token number">1</span>.587MB/1.587MB
-
-d5974ddb5a45: Loading layer  <span class="token number">20</span>.08MB/20.08MB
-
-5bbc5831d696: Loading layer  <span class="token number">3</span>.584kB/3.584kB
-
-73d61bf022fd: Loading layer  <span class="token number">2</span>.048kB/2.048kB
-
-Loaded image: registry:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>6、启动registry容器：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker run -itd -v /opt/registry:/var/lib/registry -p 5000:5000 --name registry registry:latest</span>
-
-2931309e69d0346e7a094362133f8fff588b90914e59350f9d861dbfe2e2c711<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>7、编写daemon.json文件：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># vi /etc/docker/daemon.json    #添加以下内容</span>
-
-<span class="token punctuation">{</span>
-
-<span class="token string">"insecure-registries"</span>:<span class="token punctuation">[</span><span class="token string">"192.168.100.144:5000"</span><span class="token punctuation">]</span>
-
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>输入完成之后按键盘上的ESC键退出插入模式，最后一行没有出现– INSERT –就可以输入：<code>wq</code> （保存且退出）</p>
-<p>8、重启docker服务：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># systemctl restart docker</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>9、查看容器的相关信息：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker info</span>
-
-Containers: <span class="token number">1</span>
-
- Running: <span class="token number">0</span>
-
- Paused: <span class="token number">0</span>
-
- Stopped: <span class="token number">1</span>
-
-Images: <span class="token number">1</span>
-
-Server Version: <span class="token number">18.09</span>.6
-
-Storage Driver: devicemapper
-
- Pool Name: docker-253:0-67650867-pool
-
- Pool Blocksize: <span class="token number">65</span>.54kB
-
- Base Device Size: <span class="token number">10</span>.74GB
-
- Backing Filesystem: xfs
-
- Udev Sync Supported: <span class="token boolean">true</span>
-
- Data file: /dev/loop0
-
- Metadata file: /dev/loop1
-
- Data loop file: /var/lib/docker/devicemapper/devicemapper/data
-
- Metadata loop file: /var/lib/docker/devicemapper/devicemapper/metadata
-
- Data Space Used: <span class="token number">59</span>.44MB
-
- Data Space Total: <span class="token number">107</span>.4GB
-
- Data Space Available: <span class="token number">27</span>.74GB
-
- Metadata Space Used: <span class="token number">692</span>.2kB
-
- Metadata Space Total: <span class="token number">2</span>.147GB
-
- Metadata Space Available: <span class="token number">2</span>.147GB
-
- Thin Pool Minimum Free Space: <span class="token number">10</span>.74GB
-
- Deferred Removal Enabled: <span class="token boolean">true</span>
-
- Deferred Deletion Enabled: <span class="token boolean">true</span>
-
- Deferred Deleted Device Count: <span class="token number">0</span>
-
- Library Version: <span class="token number">1.02</span>.107-RHEL7 <span class="token punctuation">(</span><span class="token number">2015</span>-10-14<span class="token punctuation">)</span>
-
-Logging Driver: json-file
-
-Cgroup Driver: cgroupfs
-
-Plugins:
-
- Volume: <span class="token builtin class-name">local</span>
-
- Network: bridge <span class="token function">host</span> macvlan null overlay
-
- Log: awslogs fluentd gcplogs gelf journald json-file <span class="token builtin class-name">local</span> logentries splunk syslog
-
-Swarm: inactive
-
-Runtimes: runc
-
-Default Runtime: runc
-
-Init Binary: docker-init
-
-containerd version: b34a5c8af56e510852c35414db4c1f4fa6172339
-
-runc version: 3e425f80a8c931f88e6d94a8c831b9d5aa481657
-
-init version: fec3683
-
-Security Options:
-
- seccomp
-
- Profile: default
-
-Kernel Version: <span class="token number">3.10</span>.0-327.el7.x86_64
-
-Operating System: CentOS Linux <span class="token number">7</span> <span class="token punctuation">(</span>Core<span class="token punctuation">)</span>
-
-OSType: linux
-
-Architecture: x86_64
-
-CPUs: <span class="token number">2</span>
-
-Total Memory: <span class="token number">3</span>.688GiB
-
-Name: xserver1
-
-ID: 42CR:4TGY:VUJ3:HR5L:3Z2J:ICYF:4MDN:NNT5:D5UE:K6R5:FIDR:3WJB
-
-Docker Root Dir: /var/lib/docker
-
-Debug Mode <span class="token punctuation">(</span>client<span class="token punctuation">)</span>: <span class="token boolean">false</span>
-
-Debug Mode <span class="token punctuation">(</span>server<span class="token punctuation">)</span>: <span class="token boolean">false</span>
-
-Registry: https://index.docker.io/v1/
-
-Labels:
-
-Experimental: <span class="token boolean">false</span>
-
-Insecure Registries:
-
- <span class="token number">192.168</span>.100.144:5000
-
- <span class="token number">127.0</span>.0.0/8
-
-Live Restore Enabled: <span class="token boolean">false</span>
-
-Product License: Community Engine
-
- <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="Docker运维："><a href="#Docker运维：" class="headerlink" title="Docker运维："></a>Docker运维：</h2><blockquote>
-<p><strong>使用xserver1节点，上传nginx_latest.tar到xserver1节点中，然后将该镜像打标签，上传至私有仓库。使用xserver2节点，自行安装docker服务，配置xserver2节点使用xserver1的私有仓库，配置完毕后，在xserver2节点拉取nginx_latest.tar镜像。最后将在xserver2上执行docker images命令返回的结果以文本形式提交到答题框。</strong></p>
-<p>可在一个节点上完成</p>
-</blockquote>
-<p>1、先安装docker，同上一题的操作一样（之后不再解释这一步），配置yum源：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># cd /etc/yum.repos.d/</span>
-
-<span class="token punctuation">[</span>root@xserver1 yum.repos.d<span class="token punctuation">]</span><span class="token comment">#mv * /media/  #将目录底下的源全部移走</span>
-
-<span class="token punctuation">[</span>root@xserver1 yum.repos.d<span class="token punctuation">]</span><span class="token comment"># vi local.repo</span>
-
-<span class="token punctuation">[</span>docker<span class="token punctuation">]</span>
-
-<span class="token assign-left variable">name</span><span class="token operator">=</span>docker
-
-<span class="token assign-left variable">baseurl</span><span class="token operator">=</span>file:///root/Docker
-
-<span class="token assign-left variable">gpgcheck</span><span class="token operator">=</span><span class="token number">0</span>
-
-<span class="token assign-left variable">enabled</span><span class="token operator">=</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>输入完成之后按键盘上的ESC键退出插入模式，最后一行没有出现– INSERT –后输入：<code>wq</code> （保存且退出）</p>
-<p>2、回到家目录，解压家目录下的Docker.tar.gz包：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 yum.repos.d<span class="token punctuation">]</span><span class="token comment"># cd       #回到家目录</span>
-
-<span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># ll            #查看是否有Docker.tar.gz包</span>
-
-<span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># tar -zxvf Docker.tar.gz   #解压包</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>3、下载docker包：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># yum -y install docker-ce</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>4、开启docker服务：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># systemctl start docker</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<hr>
-<p>5、上传nginx_latest.tar包：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker load -i nginx_latest.tar </span>
-
-b67d19e65ef6: Loading layer  <span class="token number">72</span>.5MB/72.5MB
-
-6eaad811af02: Loading layer  <span class="token number">57</span>.54MB/57.54MB
-
-a89b8f05da3a: Loading layer  <span class="token number">3</span>.584kB/3.584kB
-
-Loaded image: nginx:latest
-
- <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>6、打标签：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker tag nginx:latest 192.168.100.144:5000/nginx</span>
-
- <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>7、查看镜像信息（命令：docker images）：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker images</span>
-
-REPOSITORY          TAG         IMAGE ID       CREATED       SIZE
-
-<span class="token number">192.168</span>.100.144:5000/nginx  latest        540a289bab6c     <span class="token number">19</span> months ago    126MB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="部署Swarm集群："><a href="#部署Swarm集群：" class="headerlink" title="部署Swarm集群："></a><em>部署Swarm集群：</em></h2><blockquote>
-<p>使用xserver1、xserver2节点，自行配置好网络，安装好docker-ce。<strong>部署Swarm集群，并安装Portainer图形化管理工具，部署完成后，使用浏览器登录ip:9000界面，进入Swarm控制台。将curl swarm ip:9000返回的结果以文本形式提交到答题框。</strong></p>
-</blockquote>
-<p>1、用本地yum源下载docker（上述题有方法，不赘述）</p>
-<p>2、下载docker包：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># yum -y install docker-ce</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p> 3、开启docker服务：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># systemctl start docker</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>4、安装portainer图形化管理工具：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker load -i portainer_portainer_latest.tar </span>
-
-dd4969f97241: Loading layer   278kB/278kB
-
-8b156c0136c9: Loading layer  <span class="token number">80</span>.32MB/80.32MB
-
-Loaded image ID: sha256:4cda95efb0e455c3044d727988c36c5947a4287f77db96e799199b349b3d523c<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>6、启动容器：</p>
-<p>先查看镜像id（docker images）：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker images</span>
-
-REPOSITORY          TAG         IMAGE ID       CREATED       SIZE
-
-<span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>            <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>        4cda95efb0e4     <span class="token number">20</span> months ago    <span class="token number">80</span>.6MB
-
- <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>启动容器：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker run -d -p 9000:9000 4cda95efb0e4</span>
-
-b7c9cb0f2576964c486d4dc6d47a4eba0d30c008c10a2889bfe1ffb5386421a7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>查看容器状态：   容器状态时create，就需要启动容器</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker ps -a</span>
-
-CONTAINER ID     IMAGE        COMMAND          CREATED       STATUS            PORTS        NAMES
-
-b7c9cb0f2576     4cda95efb0e4     <span class="token string">"/portainer"</span>       <span class="token number">23</span> seconds ago    Created  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>启动容器（docker start 容器id）：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker start b7c9cb0f2576</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p> <u>注意：如遇到这种启动失败的情况，请重启docker服务，命令（<code>systemctl restart docker</code>）:</u></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"> <span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># docker start b7c9cb0f2576 </span>
-
-Error response from daemon: driver failed programming external connectivity on endpoint reverent_nobel <span class="token punctuation">(</span>47ffbf28f68d851c9488e4cd95c1f8a1b6949c705f5e082c1a4740e38760368d<span class="token punctuation">)</span>:  <span class="token punctuation">(</span>iptables failed: iptables --wait -t nat -A DOCKER -p tcp -d <span class="token number">0</span>/0 --dport <span class="token number">9000</span> -j DNAT --to-destination <span class="token number">172.17</span>.0.2:9000 <span class="token operator">!</span> -i docker0: iptables: No chain/target/match by that name.
-
- <span class="token punctuation">(</span>exit status <span class="token number">1</span><span class="token punctuation">))</span>
-
-Error: failed to start containers: b7c9cb0f2576<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>7、使用curl命令返回IP：9000的结果：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment"># curl 192.168.100.144:9000</span>
-
-<span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">&gt;</span><span class="token operator">&lt;</span>html <span class="token assign-left variable">lang</span><span class="token operator">=</span><span class="token string">"en"</span> ng-app<span class="token operator">=</span><span class="token string">"portainer"</span><span class="token operator">&gt;</span>
-
-<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
-
-  <span class="token operator">&lt;</span>meta <span class="token assign-left variable">charset</span><span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token operator">&gt;</span>
-
- <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Portainer<span class="token operator">&lt;</span>/title<span class="token operator">&gt;</span>
-
-  <span class="token operator">&lt;</span>meta <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">"description"</span> <span class="token assign-left variable">content</span><span class="token operator">=</span><span class="token string">""</span><span class="token operator">&gt;</span>
-
-  <span class="token operator">&lt;</span>meta <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">"author"</span> <span class="token assign-left variable">content</span><span class="token operator">=</span><span class="token string">"Portainer.io"</span><span class="token operator">&gt;</span>
-
-<span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"row"</span> <span class="token assign-left variable">style</span><span class="token operator">=</span><span class="token string">"text-align: center"</span><span class="token operator">&gt;</span>
-
-  Loading Portainer<span class="token punctuation">..</span>.
-
-  <span class="token operator">&lt;</span>i <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"fa fa-cog fa-spin"</span> <span class="token assign-left variable">style</span><span class="token operator">=</span><span class="token string">"margin-left: 5px"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/i<span class="token operator">&gt;</span>
-
-  <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="Docker管理："><a href="#Docker管理：" class="headerlink" title="Docker管理："></a>Docker管理：</h2><blockquote>
-<p><em><strong>假设当前存在docker镜像mysqlatest，将该镜像上传至本地，然后将该镜像推送至本地仓库（假设仓库地址为192.168.100.100:5000)，从私有仓库中拉取mariadbv10.3.18镜像。运行mysql镜像，要求将内部3306端口映射到外部的13306端口，提供交互接口，后台运行，容器名为xmysql。最后将mysql镜像和创建的容器删除。依次提交操作命令。</strong></em></p>
-</blockquote>
-<p><code>docker load -i mysql:latest</code></p>
-<p><code>docker push 192.168.100.100:5000/mysql:latest</code></p>
-<p><code>docker pull mariadb:v10.3.18</code></p>
-<p><code>docker run -itd –-name xmysql -p 13306:3306 mysql:latest /bin/bash</code></p>
-<p><code>docker rmi mysql:latest</code></p>
-<p><code>docker rm -f xmysql</code></p>
-<h2 id="Docker管理2："><a href="#Docker管理2：" class="headerlink" title="Docker管理2："></a>Docker管理2：</h2><blockquote>
-<p><em><strong>*假设当前存在docker镜像tomcatlatest，现在将tomcat镜像导出，导出名称为tomcat_images.tar，放在/media目录下,将以上操作命令填入答题框。*</strong></em></p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 images<span class="token punctuation">]</span><span class="token comment">#docker save tomcat:latest &gt; /media/tomcat_images.tar</span>
-
- <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="Dockerfile编写："><a href="#Dockerfile编写：" class="headerlink" title="Dockerfile编写："></a>Dockerfile编写：</h2><blockquote>
-<p><em><strong>*使用xserver1节点，新建httpd目录，然后编写Dockerfile文件，要求如下∶1)使用centos:latest镜像作为基础镜像;2)作者为xiandian ; 3)Dockerfile要求删除镜像的yum源，使用当前系统的local.repo源文件;4)安装http服务;5)暴露80端口。编写完毕后，构建的镜像名字叫httpd.v1.0的镜像。完成后将Dockerfile文件和镜像列表信息以文本形式提交到答题框。*</strong></em></p>
-</blockquote>
-<p>1、创建httpd目录,并进入目录：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># mkdir httpd</span>
-
-<span class="token punctuation">[</span>root@xserver1 ~<span class="token punctuation">]</span><span class="token comment"># cd httpd/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>2、在目录中创建并编写Dockerfile文件：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 httpd<span class="token punctuation">]</span><span class="token comment"># vi Dockerfile</span>
-
- 
-
-FROM centos:latest
-
-MAINTAINER xiandian
-
-RUN <span class="token function">rm</span> -rf /etc/yum.repos.d/*
-
-ADD local.repo /etc/yum.repos.d/
-
-RUN yum -y <span class="token function">install</span> httpd
-
-EXPOSE <span class="token number">80</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>输入完成之后按键盘上的ESC键退出插入模式，最后一行没有出现– INSERT –就可以输入：<code>wq</code> （保存且退出）</p>
-<p>3、先在当前目录httpd中创建一个名为local.repo文件：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 httpd<span class="token punctuation">]</span><span class="token comment"># touch local.repo</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>1、 将RUN yum -y install httpd注释掉：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 httpd<span class="token punctuation">]</span><span class="token comment"># vi Dockerfile </span>
-
- 
-
-FROM centos:latest
-
-MAINTAINER xiandian
-
-RUN <span class="token function">rm</span> -rf /etc/yum.repos.d/*
-
-ADD local.repo /etc/yum.repos.d/
-
-<span class="token punctuation">\</span>#RUN yum -y <span class="token function">install</span> httpd
-
-EXPOSE <span class="token number">80</span>
-
- <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>#输入完成之后按键盘上的ESC键退出插入模式，最后一行没有出现– INSERT –就可以输入：<code>wq</code> （保存且退出）</p>
-<p>因为centos:latest这个镜像是centos8最新版本，我们电脑的linux版本是centos7，可以用一下命令查看linux版本，如果版本是最新版本，就不需要注释掉RUN yum -y install httpd，直接进入构建镜像步骤：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 httpd<span class="token punctuation">]</span><span class="token comment"># cat /etc/redhat-release </span>
-
-CentOS Linux release <span class="token number">7.2</span>.1511 <span class="token punctuation">(</span>Core<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>5、构建镜像：</p>
-<p>如遇到这种<strong>报错</strong>提示，启动docker服务：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 httpd<span class="token punctuation">]</span><span class="token comment"># docker build -t httpd:v1.0 .</span>
-
-Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
-
-<span class="token punctuation">[</span>root@xserver1 httpd<span class="token punctuation">]</span><span class="token comment"># systemctl start docker</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>出现下面两行，就算构建镜像成功：</p>
-<p><code>Successfully built 1a549714d06f</code></p>
-<p><code>Successfully tagged httpd:v1.0</code></p>
-<p>6、查看镜像列表信息：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@xserver1 httpd<span class="token punctuation">]</span><span class="token comment"># docker images</span>
-
-REPOSITORY          TAG         IMAGE ID       CREATED        SIZE
-
-httpd             v1.0         1a549714d06f     About a minute ago  209MB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                <h1 id="从零开始学Unity（2）"><a href="#从零开始学Unity（2）" class="headerlink" title="从零开始学Unity（2）"></a>从零开始学Unity（2）</h1><h2 id="游戏对象"><a href="#游戏对象" class="headerlink" title="游戏对象"></a>游戏对象</h2><h3 id="1、游戏对象的基本操作"><a href="#1、游戏对象的基本操作" class="headerlink" title="1、游戏对象的基本操作"></a>1、游戏对象的基本操作</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185247995.png" alt="image-20210801185247995"></p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185339420.png" alt="image-20210801185339420"></p>
+<h2 id="对象的显示顺序"><a href="#对象的显示顺序" class="headerlink" title="对象的显示顺序"></a>对象的显示顺序</h2><h3 id="1、控制对象的显示顺序"><a href="#1、控制对象的显示顺序" class="headerlink" title="1、控制对象的显示顺序"></a>1、控制对象的显示顺序</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185551445.png" alt="image-20210801185551445"></p>
+<p>示例：在Hierarchy中点选要修改的层级对象，然后在inspector中通过修改Order In Layer属性的值，控制显示顺序（<font color="green">值越大显示优先级越高</font>）</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185748797.png" alt="image-20210801185748797"></p>
+<p>示例2：</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190234775.png" alt="image-20210801190234775"></p>
+<h3 id="2、要点与细节"><a href="#2、要点与细节" class="headerlink" title="2、要点与细节"></a>2、要点与细节</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190316991.png" alt="image-20210801190316991"></p>
+<h2 id="对象的轴心"><a href="#对象的轴心" class="headerlink" title="对象的轴心"></a>对象的轴心</h2><h3 id="1、轴心的作用"><a href="#1、轴心的作用" class="headerlink" title="1、轴心的作用"></a>1、轴心的作用</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190352632.png" alt="image-20210801190352632"></p>
+<p>示例：</p>
+<p>如，修改成90度时，小猪佩奇也绕着轴心转了90度。</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190517903.png" alt="image-20210801190517903"></p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190456007.png" alt="image-20210801190456007"></p>
+<h3 id="2、怎样修改轴心"><a href="#2、怎样修改轴心" class="headerlink" title="2、怎样修改轴心"></a>2、怎样修改轴心</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190954826.png" alt="image-20210801190954826"></p>
+<p>注意，要找到Sprite Editor界面，要点选<font color="blue">Project</font>界面中对应的图层，才能看到。</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801191239770.png" alt="image-20210801191239770"></p>
+<p>点开后就打开了一个编辑器，可以自己拖动轴心进行位置修改，也可以通过修改Pivot属性直接定位到不同的位置，点击右上角的Apply即可生效。</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801191425739.png" alt="image-20210801191425739"></p>
+<h2 id="对象的父子关系"><a href="#对象的父子关系" class="headerlink" title="对象的父子关系"></a>对象的父子关系</h2><h3 id="1、基本介绍"><a href="#1、基本介绍" class="headerlink" title="1、基本介绍"></a>1、基本介绍</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801191829892.png" alt="image-20210801191829892"></p>
+<p>这里很简单，类似于PS的图层组，都在一个组里后，控制他们的父组就可以控制里面所有的子对象。</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192021350.png" alt="image-20210801192021350"></p>
+<h3 id="2、注意"><a href="#2、注意" class="headerlink" title="2、注意"></a>2、注意</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192117840.png" alt="image-20210801192117840"></p>
+<p>父对象移动时，里面的子对象坐标不会发生变化。（相对坐标系）</p>
+<p>父对象好比地球，地球移动，不代表里面的子对象也进行了移动。</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192340005.png" alt="image-20210801192340005"></p>
+<h2 id="图片——图片的切割"><a href="#图片——图片的切割" class="headerlink" title="图片——图片的切割"></a>图片——图片的切割</h2><h3 id="1、图片素材从那里来？"><a href="#1、图片素材从那里来？" class="headerlink" title="1、图片素材从那里来？"></a>1、图片素材从那里来？</h3><p>在学习阶段，可以百度或者从一些资源网站获取</p>
+<p>在正式工作时，会有专门的美术人员提供</p>
+<h3 id="2、2D图片的要求"><a href="#2、2D图片的要求" class="headerlink" title="2、2D图片的要求"></a>2、2D图片的要求</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192754062.png" alt="image-20210801192754062"></p>
+<h3 id="3、为什么要切割图片？"><a href="#3、为什么要切割图片？" class="headerlink" title="3、为什么要切割图片？"></a>3、为什么要切割图片？</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193030301.png" alt="image-20210801193030301"></p>
+<h3 id="4、图片切割的方法"><a href="#4、图片切割的方法" class="headerlink" title="4、图片切割的方法"></a>4、图片切割的方法</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193119344.png" alt="image-20210801193119344"></p>
+<p>点击slice会自动帮忙裁出对象<img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193218081.png" alt="image-20210801193218081"></p>
+<p>保存后返回应用，回到<font color="blue">Project</font>界面，点击箭头图标，会发现裁好的图片</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193323517.png" alt="image-20210801193323517"></p>
+<h3 id="5、要点与细节"><a href="#5、要点与细节" class="headerlink" title="5、要点与细节"></a>5、要点与细节</h3><p>一个图片未经切割时，则只包含一个Sprite素材</p>
+<h2 id="图片与渲染器"><a href="#图片与渲染器" class="headerlink" title="图片与渲染器"></a>图片与渲染器</h2><h3 id="1、两个术语"><a href="#1、两个术语" class="headerlink" title="1、两个术语"></a>1、两个术语</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193553870.png" alt="image-20210801193553870"></p>
+<p>示例：</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193744234.png" alt="image-20210801193744234"></p>
+<p>这样图片一就修改成了图片二。</p>
+<h3 id="2、操作详解"><a href="#2、操作详解" class="headerlink" title="2、操作详解"></a>2、操作详解</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193830545.png" alt="image-20210801193830545"></p>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="1、组件是什么？"><a href="#1、组件是什么？" class="headerlink" title="1、组件是什么？"></a>1、组件是什么？</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193941628.png" alt="image-20210801193941628"></p>
+<h3 id="2、组件和对象的关系"><a href="#2、组件和对象的关系" class="headerlink" title="2、组件和对象的关系"></a>2、组件和对象的关系</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194010872.png" alt="image-20210801194010872"></p>
+<p>第一步在Hierarchy窗口进行，第二步是在inspector窗口进行</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194204707.png" alt="image-20210801194204707"></p>
+<h3 id="3、注意"><a href="#3、注意" class="headerlink" title="3、注意"></a>3、注意</h3><p>组件是可选的，可以添加，可以删除</p>
+<h2 id="Transform组件"><a href="#Transform组件" class="headerlink" title="Transform组件"></a>Transform组件</h2><p>1、基本介绍</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194524760.png" alt="image-20210801194524760"></p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194553073.png" alt="image-20210801194553073"></p>
+<p>每一个对象都有一个transform组件</p>
+<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194707747.png" alt="image-20210801194707747"></p>
 
                 
             </div>
@@ -1006,7 +627,7 @@ httpd             v1.0         1a549714d06f     About a minute ago  209MB<span a
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://a1561532803.github.io/yueguang.github.io/posts/26626.html">https://a1561532803.github.io/yueguang.github.io/posts/26626.html</a>
+                    <a href="https://a1561532803.github.io/yueguang.github.io/posts/31551.html">https://a1561532803.github.io/yueguang.github.io/posts/31551.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1044,8 +665,12 @@ httpd             v1.0         1a549714d06f     About a minute ago  209MB<span a
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/docker/">
-                                    <span class="chip bg-color">docker</span>
+                                <a href="/tags/%E6%B8%B8%E6%88%8F/">
+                                    <span class="chip bg-color">游戏</span>
+                                </a>
+                            
+                                <a href="/tags/U3D/">
+                                    <span class="chip bg-color">U3D</span>
                                 </a>
                             
                         </div>
@@ -1478,17 +1103,18 @@ httpd             v1.0         1a549714d06f     About a minute ago  209MB<span a
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/35894.html">
+                <a href="/posts/31551.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="CSS——Multi-column Layout 布局">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="从零开始学Unity——基本操作（2）">
                         
-                        <span class="card-title">CSS——Multi-column Layout 布局</span>
+                        <span class="card-title">从零开始学Unity——基本操作（2）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1498,30 +1124,31 @@ httpd             v1.0         1a549714d06f     About a minute ago  209MB<span a
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%BC%80%E5%8F%91/" class="post-category">
-                                    web开发
-                                </a>
-                            
-                            <a href="/categories/web%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/Unity/" class="post-category">
+                                    Unity
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/tags/%E6%B8%B8%E6%88%8F/">
+                        <span class="chip bg-color">游戏</span>
+                    </a>
+                    
+                    <a href="/tags/U3D/">
+                        <span class="chip bg-color">U3D</span>
                     </a>
                     
                 </div>
@@ -1535,12 +1162,13 @@ httpd             v1.0         1a549714d06f     About a minute ago  209MB<span a
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/57113.html">
+                <a href="/posts/9321.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/zygxhp/picture/raw/master/img/docker.jpg" class="responsive-img" alt="docker复习——简答题篇">
                         
-                        <span class="card-title">docker复习——简答题篇</span>
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="SVG图（1）">
+                        
+                        <span class="card-title">SVG图（1）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1551,14 +1179,18 @@ httpd             v1.0         1a549714d06f     About a minute ago  209MB<span a
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
-                                    运维
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/%E5%BE%85%E6%9B%B4/" class="post-category">
+                                    待更
                                 </a>
                             
                             
@@ -1568,8 +1200,8 @@ httpd             v1.0         1a549714d06f     About a minute ago  209MB<span a
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/docker/">
-                        <span class="chip bg-color">docker</span>
+                    <a href="/tags/svg/">
+                        <span class="chip bg-color">svg</span>
                     </a>
                     
                 </div>

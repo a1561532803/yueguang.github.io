@@ -6,7 +6,7 @@
   <link href="https://a1561532803.github.io/yueguang.github.io/atom.xml" rel="self"/>
   
   <link href="https://a1561532803.github.io/yueguang.github.io/"/>
-  <updated>2021-07-31T18:13:51.235Z</updated>
+  <updated>2021-08-01T11:47:27.945Z</updated>
   <id>https://a1561532803.github.io/yueguang.github.io/</id>
   
   <author>
@@ -17,18 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>从零开始学Unity——基本操作（2）</title>
+    <link href="https://a1561532803.github.io/yueguang.github.io/posts/31551.html"/>
+    <id>https://a1561532803.github.io/yueguang.github.io/posts/31551.html</id>
+    <published>2021-07-31T16:19:00.000Z</published>
+    <updated>2021-08-01T11:47:27.945Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="从零开始学Unity（2）"><a href="#从零开始学Unity（2）" class="headerlink" title="从零开始学Unity（2）"></a>从零开始学Unity（2）</h1><h2 id="游戏对象"><a href="#游戏对象" class="headerlink" title="游戏对象"></a>游戏对象</h2><h3 id="1、游戏对象的基本操作"><a href="#1、游戏对象的基本操作" class="headerlink" title="1、游戏对象的基本操作"></a>1、游戏对象的基本操作</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185247995.png" alt="image-20210801185247995"></p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185339420.png" alt="image-20210801185339420"></p><h2 id="对象的显示顺序"><a href="#对象的显示顺序" class="headerlink" title="对象的显示顺序"></a>对象的显示顺序</h2><h3 id="1、控制对象的显示顺序"><a href="#1、控制对象的显示顺序" class="headerlink" title="1、控制对象的显示顺序"></a>1、控制对象的显示顺序</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185551445.png" alt="image-20210801185551445"></p><p>示例：在Hierarchy中点选要修改的层级对象，然后在inspector中通过修改Order In Layer属性的值，控制显示顺序（<font color="green">值越大显示优先级越高</font>）</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185748797.png" alt="image-20210801185748797"></p><p>示例2：</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190234775.png" alt="image-20210801190234775"></p><h3 id="2、要点与细节"><a href="#2、要点与细节" class="headerlink" title="2、要点与细节"></a>2、要点与细节</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190316991.png" alt="image-20210801190316991"></p><h2 id="对象的轴心"><a href="#对象的轴心" class="headerlink" title="对象的轴心"></a>对象的轴心</h2><h3 id="1、轴心的作用"><a href="#1、轴心的作用" class="headerlink" title="1、轴心的作用"></a>1、轴心的作用</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190352632.png" alt="image-20210801190352632"></p><p>示例：</p><p>如，修改成90度时，小猪佩奇也绕着轴心转了90度。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190517903.png" alt="image-20210801190517903"></p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190456007.png" alt="image-20210801190456007"></p><h3 id="2、怎样修改轴心"><a href="#2、怎样修改轴心" class="headerlink" title="2、怎样修改轴心"></a>2、怎样修改轴心</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190954826.png" alt="image-20210801190954826"></p><p>注意，要找到Sprite Editor界面，要点选<font color="blue">Project</font>界面中对应的图层，才能看到。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801191239770.png" alt="image-20210801191239770"></p><p>点开后就打开了一个编辑器，可以自己拖动轴心进行位置修改，也可以通过修改Pivot属性直接定位到不同的位置，点击右上角的Apply即可生效。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801191425739.png" alt="image-20210801191425739"></p><h2 id="对象的父子关系"><a href="#对象的父子关系" class="headerlink" title="对象的父子关系"></a>对象的父子关系</h2><h3 id="1、基本介绍"><a href="#1、基本介绍" class="headerlink" title="1、基本介绍"></a>1、基本介绍</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801191829892.png" alt="image-20210801191829892"></p><p>这里很简单，类似于PS的图层组，都在一个组里后，控制他们的父组就可以控制里面所有的子对象。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192021350.png" alt="image-20210801192021350"></p><h3 id="2、注意"><a href="#2、注意" class="headerlink" title="2、注意"></a>2、注意</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192117840.png" alt="image-20210801192117840"></p><p>父对象移动时，里面的子对象坐标不会发生变化。（相对坐标系）</p><p>父对象好比地球，地球移动，不代表里面的子对象也进行了移动。</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192340005.png" alt="image-20210801192340005"></p><h2 id="图片——图片的切割"><a href="#图片——图片的切割" class="headerlink" title="图片——图片的切割"></a>图片——图片的切割</h2><h3 id="1、图片素材从那里来？"><a href="#1、图片素材从那里来？" class="headerlink" title="1、图片素材从那里来？"></a>1、图片素材从那里来？</h3><p>在学习阶段，可以百度或者从一些资源网站获取</p><p>在正式工作时，会有专门的美术人员提供</p><h3 id="2、2D图片的要求"><a href="#2、2D图片的要求" class="headerlink" title="2、2D图片的要求"></a>2、2D图片的要求</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192754062.png" alt="image-20210801192754062"></p><h3 id="3、为什么要切割图片？"><a href="#3、为什么要切割图片？" class="headerlink" title="3、为什么要切割图片？"></a>3、为什么要切割图片？</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193030301.png" alt="image-20210801193030301"></p><h3 id="4、图片切割的方法"><a href="#4、图片切割的方法" class="headerlink" title="4、图片切割的方法"></a>4、图片切割的方法</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193119344.png" alt="image-20210801193119344"></p><p>点击slice会自动帮忙裁出对象<img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193218081.png" alt="image-20210801193218081"></p><p>保存后返回应用，回到<font color="blue">Project</font>界面，点击箭头图标，会发现裁好的图片</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193323517.png" alt="image-20210801193323517"></p><h3 id="5、要点与细节"><a href="#5、要点与细节" class="headerlink" title="5、要点与细节"></a>5、要点与细节</h3><p>一个图片未经切割时，则只包含一个Sprite素材</p><h2 id="图片与渲染器"><a href="#图片与渲染器" class="headerlink" title="图片与渲染器"></a>图片与渲染器</h2><h3 id="1、两个术语"><a href="#1、两个术语" class="headerlink" title="1、两个术语"></a>1、两个术语</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193553870.png" alt="image-20210801193553870"></p><p>示例：</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193744234.png" alt="image-20210801193744234"></p><p>这样图片一就修改成了图片二。</p><h3 id="2、操作详解"><a href="#2、操作详解" class="headerlink" title="2、操作详解"></a>2、操作详解</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193830545.png" alt="image-20210801193830545"></p><h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="1、组件是什么？"><a href="#1、组件是什么？" class="headerlink" title="1、组件是什么？"></a>1、组件是什么？</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193941628.png" alt="image-20210801193941628"></p><h3 id="2、组件和对象的关系"><a href="#2、组件和对象的关系" class="headerlink" title="2、组件和对象的关系"></a>2、组件和对象的关系</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194010872.png" alt="image-20210801194010872"></p><p>第一步在Hierarchy窗口进行，第二步是在inspector窗口进行</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194204707.png" alt="image-20210801194204707"></p><h3 id="3、注意"><a href="#3、注意" class="headerlink" title="3、注意"></a>3、注意</h3><p>组件是可选的，可以添加，可以删除</p><h2 id="Transform组件"><a href="#Transform组件" class="headerlink" title="Transform组件"></a>Transform组件</h2><p>1、基本介绍</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194524760.png" alt="image-20210801194524760"></p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194553073.png" alt="image-20210801194553073"></p><p>每一个对象都有一个transform组件</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194707747.png" alt="image-20210801194707747"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;从零开始学Unity（2）&quot;&gt;&lt;a href=&quot;#从零开始学Unity（2）&quot; class=&quot;headerlink&quot; title=&quot;从零开始学Unity（2）&quot;&gt;&lt;/a&gt;从零开始学Unity（2）&lt;/h1&gt;&lt;h2 id=&quot;游戏对象&quot;&gt;&lt;a href=&quot;#游戏对象&quot;</summary>
+      
+    
+    
+    
+    <category term="Unity" scheme="https://a1561532803.github.io/yueguang.github.io/categories/Unity/"/>
+    
+    
+    <category term="游戏" scheme="https://a1561532803.github.io/yueguang.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="U3D" scheme="https://a1561532803.github.io/yueguang.github.io/tags/U3D/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SVG图（1）</title>
     <link href="https://a1561532803.github.io/yueguang.github.io/posts/9321.html"/>
     <id>https://a1561532803.github.io/yueguang.github.io/posts/9321.html</id>
     <published>2021-07-30T16:04:00.000Z</published>
-    <updated>2021-07-31T18:13:51.235Z</updated>
+    <updated>2021-07-31T18:54:54.339Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="SVG图"><a href="#SVG图" class="headerlink" title="SVG图"></a>SVG图</h1><h2 id="SVG矢量图是什么"><a href="#SVG矢量图是什么" class="headerlink" title="SVG矢量图是什么"></a>SVG矢量图是什么</h2><p>是一个xml格式构成的图片，可以自己用path d代码画出来（AI软件设计出来），也可以直接引入。（img引入的是不能操作该矢量图形变化的）</p><p>iframe也可以加载svg图片，示例：</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210728020451499.png" alt="image-20210728020451499"></p><p>object/embed也都可以加载svg图片，示例：</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210728020615156.png" alt="image-20210728020615156"></p><p>能够拿到document就可以对这个图片进行操作。</p><h2 id="SVG语法"><a href="#SVG语法" class="headerlink" title="SVG语法"></a>SVG语法</h2><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210728021132896.png" alt="image-20210728021132896"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="SVG图（1）"><a href="#SVG图（1）" class="headerlink" title="SVG图（1）"></a>SVG图（1）</h1><h2 id="SVG矢量图是什么"><a href="#SVG矢量图是什么" class="headerlink" title="SVG矢量图是什么"></a>SVG矢量图是什么</h2><p>是一个xml格式构成的图片，可以自己用path d代码画出来（AI软件设计出来），也可以直接引入。（img引入的是不能操作该矢量图形变化的）</p><p>iframe也可以加载svg图片，示例：</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210728020451499.png" alt="image-20210728020451499"></p><p>object/embed也都可以加载svg图片，示例：</p><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210728020615156.png" alt="image-20210728020615156"></p><p>能够拿到document就可以对这个图片进行操作。</p><h2 id="SVG语法"><a href="#SVG语法" class="headerlink" title="SVG语法"></a>SVG语法</h2><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210728021132896.png" alt="image-20210728021132896"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;SVG图&quot;&gt;&lt;a href=&quot;#SVG图&quot; class=&quot;headerlink&quot; title=&quot;SVG图&quot;&gt;&lt;/a&gt;SVG图&lt;/h1&gt;&lt;h2 id=&quot;SVG矢量图是什么&quot;&gt;&lt;a href=&quot;#SVG矢量图是什么&quot; class=&quot;headerlink&quot; title=</summary>
+    <summary type="html">&lt;h1 id=&quot;SVG图（1）&quot;&gt;&lt;a href=&quot;#SVG图（1）&quot; class=&quot;headerlink&quot; title=&quot;SVG图（1）&quot;&gt;&lt;/a&gt;SVG图（1）&lt;/h1&gt;&lt;h2 id=&quot;SVG矢量图是什么&quot;&gt;&lt;a href=&quot;#SVG矢量图是什么&quot; class=&quot;header</summary>
       
     
     
