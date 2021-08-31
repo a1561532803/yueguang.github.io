@@ -6,7 +6,7 @@
   <link href="https://a1561532803.github.io/yueguang.github.io/atom.xml" rel="self"/>
   
   <link href="https://a1561532803.github.io/yueguang.github.io/"/>
-  <updated>2021-08-01T11:48:29.080Z</updated>
+  <updated>2021-08-31T20:58:26.777Z</updated>
   <id>https://a1561532803.github.io/yueguang.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS面试（1）——原型原型链</title>
+    <link href="https://a1561532803.github.io/yueguang.github.io/posts/16191.html"/>
+    <id>https://a1561532803.github.io/yueguang.github.io/posts/16191.html</id>
+    <published>2021-08-31T14:05:00.000Z</published>
+    <updated>2021-08-31T20:58:26.777Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JS面试——原型原型链"><a href="#JS面试——原型原型链" class="headerlink" title="JS面试——原型原型链"></a>JS面试——原型原型链</h1><h2 id="使用class实现继承"><a href="#使用class实现继承" class="headerlink" title="使用class实现继承"></a>使用class实现继承</h2><ul><li><p>基本代码<img src="https://api2.mubu.com/v3/document_image/6ebfa476-aa9a-4e5a-b7f9-76ed9e19b0ed-2637220.jpg" alt="img"></p></li><li><p><code>supper()</code>传值与继承<img src="https://api2.mubu.com/v3/document_image/be7fe330-ec1b-4fec-8e47-d3e27fd690d0-2637220.jpg" alt="img"></p></li><li><p>属性和方法都能继承</p></li></ul><h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><ul><li><p>隐式原型</p></li><li><p>这两个东西的属性完全相等<img src="https://api2.mubu.com/v3/document_image/52d9ae05-1db1-4dbc-978a-93e9dc9358c7-2637220.jpg" alt="img"></p></li><li><p>每个对象都有个原型，这个原型一般被称作隐式原型，这个隐式原型会指向构建出的实例的显示原型，当我们在一个对象上，尝试查找它的属性或方法的时候，找不到属性和方法，就会往它的隐式原型上去找</p><ul><li>student就是对象，_proto_是它的隐式原型<img src="https://api2.mubu.com/v3/document_image/ea583740-5f02-4117-94fd-a7ffd3282920-2637220.jpg" alt="img"></li></ul></li></ul><h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><ul><li><p>一张图总结<img src="https://api2.mubu.com/v3/document_image/3871c588-bdd4-4f4c-b6e9-bcf978bcdb70-2637220.jpg" alt="img"></p></li><li><p>当我们访问一个对象的属性或方法时，首先从自身的属性去找，如果找不到，就会往它的原型去找，如果从它的原型找还找不到，就会往它的原型的原型去找（套娃），就形成了原型链</p></li><li><p>如何检查一个属性和方法是否是自身所拥有的？</p><ul><li><p>通过hasOwnProperty方法</p><ul><li><code>hasOwnProperty()</code> 方法会返回一个布尔值，指示对象自身属性中是否具有指定的属性（也就是，是否有指定的键）。</li></ul></li><li><p>输入name，返回true，表示这个属性是teacher本身的属性或方法</p></li><li><p>输入teach，返回false，表示这个属性不是teacher对象本身的属性或方法，是原型上的属性和方法</p></li></ul></li><li><p>拓展</p><ul><li>object.prototype也是个对象，它的隐式原型是null，到它这里就到头了<img src="https://api2.mubu.com/v3/document_image/17609103-ec3e-49ba-b6a5-190ac6e527a5-2637220.jpg" alt="img"></li></ul></li></ul><h2 id="使用instanceof作类型判断"><a href="#使用instanceof作类型判断" class="headerlink" title="使用instanceof作类型判断"></a>使用instanceof作类型判断</h2><ul><li><p>不包含在原型链上就会false<img src="https://api2.mubu.com/v3/document_image/0dd8a5ea-2d3d-4acf-9327-e23f2128bbed-2637220.jpg" alt="img"></p></li><li><p>什么情况下，当拿一个变量instanceof一个类的时候，返回值什么时候为true？</p><ul><li>能在对象的原型上找到这个类的prototype，返回值为true。反之为false</li></ul></li></ul><blockquote><p>感谢B站up哈默聊前端</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;JS面试——原型原型链&quot;&gt;&lt;a href=&quot;#JS面试——原型原型链&quot; class=&quot;headerlink&quot; title=&quot;JS面试——原型原型链&quot;&gt;&lt;/a&gt;JS面试——原型原型链&lt;/h1&gt;&lt;h2 id=&quot;使用class实现继承&quot;&gt;&lt;a href=&quot;#使用clas</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://a1561532803.github.io/yueguang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="面试" scheme="https://a1561532803.github.io/yueguang.github.io/categories/%E5%89%8D%E7%AB%AF/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="javaScript" scheme="https://a1561532803.github.io/yueguang.github.io/tags/javaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>从零开始学Unity——基本操作（2）</title>
