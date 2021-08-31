@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="从零开始学Unity——基本操作（2）, HTML,CSS,JavaScript,JQuery,Vue.js,photoshop,Unity,UE等">
+    <meta name="keywords" content="JS面试（1）——原型原型链, HTML,CSS,JavaScript,JQuery,Vue.js,photoshop,Unity,UE等">
     <meta name="description" content="分享知识,分享经验,偶尔写点段子">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>从零开始学Unity——基本操作（2） | 在月光下滑坡</title>
+    <title>JS面试（1）——原型原型链 | 在月光下滑坡</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -363,12 +363,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">从零开始学Unity——基本操作（2）</h1>
+                    <h1 class="description center-align post-title">JS面试（1）——原型原型链</h1>
                 </div>
             </div>
         </div>
@@ -484,12 +484,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%B8%B8%E6%88%8F/">
-                                <span class="chip bg-color">游戏</span>
-                            </a>
-                        
-                            <a href="/tags/U3D/">
-                                <span class="chip bg-color">U3D</span>
+                            <a href="/tags/javaScript/">
+                                <span class="chip bg-color">javaScript</span>
                             </a>
                         
                     </div>
@@ -500,8 +496,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Unity/" class="post-category">
-                                Unity
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/%E9%9D%A2%E8%AF%95/" class="post-category">
+                                面试
                             </a>
                         
                     </div>
@@ -513,21 +513,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-01
+                    2021-08-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-01
+                    2021-09-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    563
+                    456
                 </div>
                 
 
@@ -552,55 +552,61 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="从零开始学Unity（2）"><a href="#从零开始学Unity（2）" class="headerlink" title="从零开始学Unity（2）"></a>从零开始学Unity（2）</h1><h2 id="游戏对象"><a href="#游戏对象" class="headerlink" title="游戏对象"></a>游戏对象</h2><h3 id="1、游戏对象的基本操作"><a href="#1、游戏对象的基本操作" class="headerlink" title="1、游戏对象的基本操作"></a>1、游戏对象的基本操作</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185247995.png" alt="image-20210801185247995"></p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185339420.png" alt="image-20210801185339420"></p>
-<h2 id="对象的显示顺序"><a href="#对象的显示顺序" class="headerlink" title="对象的显示顺序"></a>对象的显示顺序</h2><h3 id="1、控制对象的显示顺序"><a href="#1、控制对象的显示顺序" class="headerlink" title="1、控制对象的显示顺序"></a>1、控制对象的显示顺序</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185551445.png" alt="image-20210801185551445"></p>
-<p>示例：在Hierarchy中点选要修改的层级对象，然后在inspector中通过修改Order In Layer属性的值，控制显示顺序（<font color="green">值越大显示优先级越高</font>）</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801185748797.png" alt="image-20210801185748797"></p>
-<p>示例2：</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190234775.png" alt="image-20210801190234775"></p>
-<h3 id="2、要点与细节"><a href="#2、要点与细节" class="headerlink" title="2、要点与细节"></a>2、要点与细节</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190316991.png" alt="image-20210801190316991"></p>
-<h2 id="对象的轴心"><a href="#对象的轴心" class="headerlink" title="对象的轴心"></a>对象的轴心</h2><h3 id="1、轴心的作用"><a href="#1、轴心的作用" class="headerlink" title="1、轴心的作用"></a>1、轴心的作用</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190352632.png" alt="image-20210801190352632"></p>
-<p>示例：</p>
-<p>如，修改成90度时，小猪佩奇也绕着轴心转了90度。</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190517903.png" alt="image-20210801190517903"></p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190456007.png" alt="image-20210801190456007"></p>
-<h3 id="2、怎样修改轴心"><a href="#2、怎样修改轴心" class="headerlink" title="2、怎样修改轴心"></a>2、怎样修改轴心</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801190954826.png" alt="image-20210801190954826"></p>
-<p>注意，要找到Sprite Editor界面，要点选<font color="blue">Project</font>界面中对应的图层，才能看到。</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801191239770.png" alt="image-20210801191239770"></p>
-<p>点开后就打开了一个编辑器，可以自己拖动轴心进行位置修改，也可以通过修改Pivot属性直接定位到不同的位置，点击右上角的Apply即可生效。</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801191425739.png" alt="image-20210801191425739"></p>
-<h2 id="对象的父子关系"><a href="#对象的父子关系" class="headerlink" title="对象的父子关系"></a>对象的父子关系</h2><h3 id="1、基本介绍"><a href="#1、基本介绍" class="headerlink" title="1、基本介绍"></a>1、基本介绍</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801191829892.png" alt="image-20210801191829892"></p>
-<p>这里很简单，类似于PS的图层组，都在一个组里后，控制他们的父组就可以控制里面所有的子对象。</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192021350.png" alt="image-20210801192021350"></p>
-<h3 id="2、注意"><a href="#2、注意" class="headerlink" title="2、注意"></a>2、注意</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192117840.png" alt="image-20210801192117840"></p>
-<p>父对象移动时，里面的子对象坐标不会发生变化。（相对坐标系）</p>
-<p>父对象好比地球，地球移动，不代表里面的子对象也进行了移动。</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192340005.png" alt="image-20210801192340005"></p>
-<h2 id="图片——图片的切割"><a href="#图片——图片的切割" class="headerlink" title="图片——图片的切割"></a>图片——图片的切割</h2><h3 id="1、图片素材从那里来？"><a href="#1、图片素材从那里来？" class="headerlink" title="1、图片素材从那里来？"></a>1、图片素材从那里来？</h3><p>在学习阶段，可以百度或者从一些资源网站获取</p>
-<p>在正式工作时，会有专门的美术人员提供</p>
-<h3 id="2、2D图片的要求"><a href="#2、2D图片的要求" class="headerlink" title="2、2D图片的要求"></a>2、2D图片的要求</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801192754062.png" alt="image-20210801192754062"></p>
-<h3 id="3、为什么要切割图片？"><a href="#3、为什么要切割图片？" class="headerlink" title="3、为什么要切割图片？"></a>3、为什么要切割图片？</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193030301.png" alt="image-20210801193030301"></p>
-<h3 id="4、图片切割的方法"><a href="#4、图片切割的方法" class="headerlink" title="4、图片切割的方法"></a>4、图片切割的方法</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193119344.png" alt="image-20210801193119344"></p>
-<p>点击slice会自动帮忙裁出对象<img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193218081.png" alt="image-20210801193218081"></p>
-<p>保存后返回应用，回到<font color="blue">Project</font>界面，点击箭头图标，会发现裁好的图片</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193323517.png" alt="image-20210801193323517"></p>
-<h3 id="5、要点与细节"><a href="#5、要点与细节" class="headerlink" title="5、要点与细节"></a>5、要点与细节</h3><p>一个图片未经切割时，则只包含一个Sprite素材</p>
-<h2 id="图片与渲染器"><a href="#图片与渲染器" class="headerlink" title="图片与渲染器"></a>图片与渲染器</h2><h3 id="1、两个术语"><a href="#1、两个术语" class="headerlink" title="1、两个术语"></a>1、两个术语</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193553870.png" alt="image-20210801193553870"></p>
-<p>示例：</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193744234.png" alt="image-20210801193744234"></p>
-<p>这样图片一就修改成了图片二。</p>
-<h3 id="2、操作详解"><a href="#2、操作详解" class="headerlink" title="2、操作详解"></a>2、操作详解</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193830545.png" alt="image-20210801193830545"></p>
-<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="1、组件是什么？"><a href="#1、组件是什么？" class="headerlink" title="1、组件是什么？"></a>1、组件是什么？</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801193941628.png" alt="image-20210801193941628"></p>
-<h3 id="2、组件和对象的关系"><a href="#2、组件和对象的关系" class="headerlink" title="2、组件和对象的关系"></a>2、组件和对象的关系</h3><p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194010872.png" alt="image-20210801194010872"></p>
-<p>第一步在Hierarchy窗口进行，第二步是在inspector窗口进行</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194204707.png" alt="image-20210801194204707"></p>
-<h3 id="3、注意"><a href="#3、注意" class="headerlink" title="3、注意"></a>3、注意</h3><p>组件是可选的，可以添加，可以删除</p>
-<h2 id="Transform组件"><a href="#Transform组件" class="headerlink" title="Transform组件"></a>Transform组件</h2><p>1、基本介绍</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194524760.png" alt="image-20210801194524760"></p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194553073.png" alt="image-20210801194553073"></p>
-<p>每一个对象都有一个transform组件</p>
-<p><img src="https://gitee.com/zygxhp/picture/raw/master/img/image-20210801194707747.png" alt="image-20210801194707747"></p>
+                <h1 id="JS面试——原型原型链"><a href="#JS面试——原型原型链" class="headerlink" title="JS面试——原型原型链"></a>JS面试——原型原型链</h1><h2 id="使用class实现继承"><a href="#使用class实现继承" class="headerlink" title="使用class实现继承"></a>使用class实现继承</h2><ul>
+<li><p>基本代码<img src="https://api2.mubu.com/v3/document_image/6ebfa476-aa9a-4e5a-b7f9-76ed9e19b0ed-2637220.jpg" alt="img"></p>
+</li>
+<li><p><code>supper()</code>传值与继承<img src="https://api2.mubu.com/v3/document_image/be7fe330-ec1b-4fec-8e47-d3e27fd690d0-2637220.jpg" alt="img"></p>
+</li>
+<li><p>属性和方法都能继承</p>
+</li>
+</ul>
+<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><ul>
+<li><p>隐式原型</p>
+</li>
+<li><p>这两个东西的属性完全相等<img src="https://api2.mubu.com/v3/document_image/52d9ae05-1db1-4dbc-978a-93e9dc9358c7-2637220.jpg" alt="img"></p>
+</li>
+<li><p>每个对象都有个原型，这个原型一般被称作隐式原型，这个隐式原型会指向构建出的实例的显示原型，当我们在一个对象上，尝试查找它的属性或方法的时候，找不到属性和方法，就会往它的隐式原型上去找</p>
+<ul>
+<li>student就是对象，_proto_是它的隐式原型<img src="https://api2.mubu.com/v3/document_image/ea583740-5f02-4117-94fd-a7ffd3282920-2637220.jpg" alt="img"></li>
+</ul>
+</li>
+</ul>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><ul>
+<li><p>一张图总结<img src="https://api2.mubu.com/v3/document_image/3871c588-bdd4-4f4c-b6e9-bcf978bcdb70-2637220.jpg" alt="img"></p>
+</li>
+<li><p>当我们访问一个对象的属性或方法时，首先从自身的属性去找，如果找不到，就会往它的原型去找，如果从它的原型找还找不到，就会往它的原型的原型去找（套娃），就形成了原型链</p>
+</li>
+<li><p>如何检查一个属性和方法是否是自身所拥有的？</p>
+<ul>
+<li><p>通过hasOwnProperty方法</p>
+<ul>
+<li><code>hasOwnProperty()</code> 方法会返回一个布尔值，指示对象自身属性中是否具有指定的属性（也就是，是否有指定的键）。</li>
+</ul>
+</li>
+<li><p>输入name，返回true，表示这个属性是teacher本身的属性或方法</p>
+</li>
+<li><p>输入teach，返回false，表示这个属性不是teacher对象本身的属性或方法，是原型上的属性和方法</p>
+</li>
+</ul>
+</li>
+<li><p>拓展</p>
+<ul>
+<li>object.prototype也是个对象，它的隐式原型是null，到它这里就到头了<img src="https://api2.mubu.com/v3/document_image/17609103-ec3e-49ba-b6a5-190ac6e527a5-2637220.jpg" alt="img"></li>
+</ul>
+</li>
+</ul>
+<h2 id="使用instanceof作类型判断"><a href="#使用instanceof作类型判断" class="headerlink" title="使用instanceof作类型判断"></a>使用instanceof作类型判断</h2><ul>
+<li><p>不包含在原型链上就会false<img src="https://api2.mubu.com/v3/document_image/0dd8a5ea-2d3d-4acf-9327-e23f2128bbed-2637220.jpg" alt="img"></p>
+</li>
+<li><p>什么情况下，当拿一个变量instanceof一个类的时候，返回值什么时候为true？</p>
+<ul>
+<li>能在对象的原型上找到这个类的prototype，返回值为true。反之为false</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>感谢B站up哈默聊前端</p>
+</blockquote>
 
                 
             </div>
@@ -627,7 +633,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://a1561532803.github.io/yueguang.github.io/posts/31551.html">https://a1561532803.github.io/yueguang.github.io/posts/31551.html</a>
+                    <a href="https://a1561532803.github.io/yueguang.github.io/posts/49910.html">https://a1561532803.github.io/yueguang.github.io/posts/49910.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -665,12 +671,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%B8%B8%E6%88%8F/">
-                                    <span class="chip bg-color">游戏</span>
-                                </a>
-                            
-                                <a href="/tags/U3D/">
-                                    <span class="chip bg-color">U3D</span>
+                                <a href="/tags/javaScript/">
+                                    <span class="chip bg-color">javaScript</span>
                                 </a>
                             
                         </div>
@@ -1103,9 +1105,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/49910.html">
                     <div class="card-image">
@@ -1123,9 +1126,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1142,6 +1145,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1160,13 +1164,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/9321.html">
+                <a href="/posts/31551.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="SVG图（1）">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="从零开始学Unity——基本操作（2）">
                         
-                        <span class="card-title">SVG图（1）</span>
+                        <span class="card-title">从零开始学Unity——基本操作（2）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1177,18 +1181,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/%E5%BE%85%E6%9B%B4/" class="post-category">
-                                    待更
+                            <a href="/categories/Unity/" class="post-category">
+                                    Unity
                                 </a>
                             
                             
@@ -1198,8 +1198,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/svg/">
-                        <span class="chip bg-color">svg</span>
+                    <a href="/tags/%E6%B8%B8%E6%88%8F/">
+                        <span class="chip bg-color">游戏</span>
+                    </a>
+                    
+                    <a href="/tags/U3D/">
+                        <span class="chip bg-color">U3D</span>
                     </a>
                     
                 </div>
